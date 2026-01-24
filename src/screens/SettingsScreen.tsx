@@ -1,23 +1,24 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert, ScrollView } from 'react-native';
+import { Ionicons } from "@expo/vector-icons";
 import { clearProgress } from '../utils/storage';
 import { useNavigation } from '@react-navigation/native';
+import { colors, globalStyles } from "../styles/theme";
 
 export default function SettingsScreen() {
   const navigation = useNavigation();
 
   const handleReset = () => {
     Alert.alert(
-      "Attention",
-      "Voulez-vous vraiment effacer tout votre historique et vos scores ?",
+      "Réinitialisation",
+      "Cette action est irréversible. Voulez-vous vraiment tout effacer ?",
       [
         { text: "Annuler", style: "cancel" },
         { 
-          text: "Effacer tout", 
+          text: "Confirmer", 
           style: "destructive", 
           onPress: async () => {
             await clearProgress();
-            Alert.alert("Succès", "Données effacées.");
             navigation.goBack();
           }
         }
@@ -25,49 +26,79 @@ export default function SettingsScreen() {
     );
   };
 
+  const renderRow = (label: string, value: string | React.ReactNode, icon?: string, isDestructive?: boolean, onPress?: () => void) => (
+    <TouchableOpacity 
+      style={styles.row} 
+      onPress={onPress} 
+      disabled={!onPress}
+      activeOpacity={0.7}
+    >
+      <View style={styles.rowLeft}>
+        {icon && <Ionicons name={icon as any} size={20} color={isDestructive ? colors.error : colors.text} style={styles.rowIcon} />}
+        <Text style={[styles.rowLabel, isDestructive && { color: colors.error }]}>{label}</Text>
+      </View>
+      <View style={styles.rowRight}>
+        {typeof value === 'string' ? <Text style={styles.rowValue}>{value}</Text> : value}
+        {onPress && <Ionicons name="chevron-forward" size={16} color={colors.textLight} style={{marginLeft: 8}} />}
+      </View>
+    </TouchableOpacity>
+  );
+
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Données</Text>
-        <TouchableOpacity style={styles.row} onPress={handleReset}>
-          <Text style={[styles.rowText, { color: '#E53E3E' }]}>Réinitialiser ma progression</Text>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Application</Text>
-        <View style={styles.row}>
-          <Text style={styles.rowText}>Version</Text>
-          <Text style={styles.rowValue}>1.0.0 (MVP)</Text>
+    <ScrollView style={globalStyles.container}>
+      <View style={styles.content}>
+        
+        <Text style={styles.sectionHeader}>APPLICATION</Text>
+        <View style={styles.sectionBlock}>
+          {renderRow("Version", "1.0.0", "information-circle-outline")}
+          <View style={styles.divider} />
+          {renderRow("Contact", "support@tonapp.com", "mail-outline")}
         </View>
-        <View style={styles.row}>
-          <Text style={styles.rowText}>Contact</Text>
-          <Text style={styles.rowValue}>support@tonapp.com</Text>
-        </View>
-      </View>
 
-      <Text style={styles.footer}>
-        Fait avec ❤️ à Montréal pour les futurs camionneurs.
-      </Text>
+        <Text style={styles.sectionHeader}>GESTION DES DONNÉES</Text>
+        <View style={styles.sectionBlock}>
+          {renderRow("Réinitialiser ma progression", "", "trash-outline", true, handleReset)}
+        </View>
+
+        <Text style={styles.footerText}>
+          Développé à Montréal 🇨🇦
+        </Text>
+      </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F5F7FA', padding: 20 },
-  section: { marginBottom: 30 },
-  sectionTitle: { fontSize: 14, fontWeight: 'bold', color: '#718096', marginBottom: 10, textTransform: 'uppercase' },
+  content: { padding: 20 },
+  sectionHeader: { 
+    fontSize: 13, 
+    fontWeight: '700', 
+    color: colors.textLight, 
+    marginBottom: 8, 
+    marginTop: 16,
+    marginLeft: 4,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5 
+  },
+  sectionBlock: {
+    backgroundColor: colors.card,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: colors.border,
+    overflow: 'hidden',
+  },
   row: { 
-    backgroundColor: 'white', 
-    padding: 16, 
-    borderRadius: 8, 
     flexDirection: 'row', 
     justifyContent: 'space-between', 
-    alignItems: 'center',
-    marginBottom: 1, 
-    elevation: 1 
+    alignItems: 'center', 
+    padding: 16,
+    backgroundColor: 'white',
   },
-  rowText: { fontSize: 16, color: '#2D3748' },
-  rowValue: { fontSize: 16, color: '#A0AEC0' },
-  footer: { textAlign: 'center', color: '#CBD5E0', marginTop: 20, fontSize: 12 }
+  rowLeft: { flexDirection: 'row', alignItems: 'center' },
+  rowIcon: { marginRight: 12 },
+  rowLabel: { fontSize: 16, color: colors.text, fontWeight: '500' },
+  rowRight: { flexDirection: 'row', alignItems: 'center' },
+  rowValue: { fontSize: 16, color: colors.textLight },
+  divider: { height: 1, backgroundColor: colors.border, marginLeft: 48 },
+  footerText: { textAlign: 'center', marginTop: 32, color: colors.textLight, fontSize: 13 },
 });

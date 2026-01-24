@@ -2,9 +2,11 @@ import React, { useCallback, useState } from "react";
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { Ionicons } from "@expo/vector-icons";
 import { RootStackParamList, QuizCategory } from "../types";
 import data from "../data/questions.json";
 import { getScores, ScoreData } from "../utils/storage";
+import { colors, globalStyles } from "../styles/theme";
 
 type TopicNavProp = NativeStackNavigationProp<RootStackParamList, "TopicSelection">;
 
@@ -21,26 +23,29 @@ export default function TopicSelectionScreen() {
 
   const renderItem = ({ item }: { item: QuizCategory }) => {
     const userScore = scores[item.id];
+    const percentage = userScore ? Math.round((userScore.score / userScore.total) * 100) : 0;
+    const hasScore = !!userScore;
 
     return (
       <TouchableOpacity
-        style={styles.item}
-        onPress={() =>
-          navigation.navigate("Quiz", { categoryId: item.id, mode: "practice" })
-        }
+        style={styles.card}
+        onPress={() => navigation.navigate("Quiz", { categoryId: item.id, mode: "practice" })}
+        activeOpacity={0.8}
       >
         <View style={styles.row}>
-          <View style={styles.info}>
-            <Text style={styles.itemTitle}>{item.label}</Text>
-            <Text style={styles.itemDesc}>{item.description}</Text>
+          <View style={styles.textContainer}>
+            <Text style={styles.cardTitle}>{item.label}</Text>
+            <Text style={styles.cardDesc}>{item.description}</Text>
           </View>
 
-          {userScore && (
-            <View style={styles.scoreBadge}>
-              <Text style={styles.scoreText}>
-                {Math.round((userScore.score / userScore.total) * 100)}%
+          {hasScore ? (
+            <View style={[styles.badge, percentage >= 75 ? styles.badgeSuccess : styles.badgeNeutral]}>
+              <Text style={[styles.badgeText, percentage >= 75 ? styles.textSuccess : styles.textNeutral]}>
+                {percentage}%
               </Text>
             </View>
+          ) : (
+            <Ionicons name="chevron-forward" size={20} color={colors.textLight} />
           )}
         </View>
       </TouchableOpacity>
@@ -48,7 +53,7 @@ export default function TopicSelectionScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={globalStyles.container}>
       <FlatList
         data={categories}
         keyExtractor={(item) => item.id}
@@ -60,28 +65,30 @@ export default function TopicSelectionScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#F5F7FA" },
-  list: { padding: 16, gap: 12 },
-  item: {
-    backgroundColor: "white",
-    padding: 20,
+  list: { padding: 20 },
+  card: {
+    backgroundColor: colors.card,
     borderRadius: 12,
+    padding: 20,
     marginBottom: 12,
+    borderWidth: 1,
+    borderColor: colors.border,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.05,
+    shadowRadius: 2,
     elevation: 1,
   },
-  row: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  info: { flex: 1, marginRight: 10 },
-  itemTitle: { fontSize: 18, fontWeight: "600", color: "#2D3748" },
-  itemDesc: { fontSize: 14, color: "#718096", marginTop: 4 },
-  scoreBadge: {
-    backgroundColor: "#C6F6D5",
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderRadius: 8,
-  },
-  scoreText: { color: "#22543D", fontWeight: "bold", fontSize: 14 },
+  row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+  textContainer: { flex: 1, marginRight: 12 },
+  cardTitle: { fontSize: 17, fontWeight: "700", color: colors.text, marginBottom: 4 },
+  cardDesc: { fontSize: 14, color: colors.textLight },
+  
+  badge: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 20 },
+  badgeSuccess: { backgroundColor: colors.successBg },
+  badgeNeutral: { backgroundColor: colors.border },
+  
+  badgeText: { fontSize: 14, fontWeight: "700" },
+  textSuccess: { color: colors.success },
+  textNeutral: { color: colors.textLight },
 });

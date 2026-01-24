@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
+import { Ionicons } from "@expo/vector-icons";
 import { safetyData, InspectionItem } from '../data/safetyData';
+import { colors, globalStyles } from "../styles/theme";
 
 export default function SafetyCheckScreen() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
@@ -14,25 +16,37 @@ export default function SafetyCheckScreen() {
 
     return (
       <View style={styles.card}>
-        <TouchableOpacity onPress={() => toggleExpand(item.id)} style={styles.cardHeader}>
-          <Text style={styles.partName}>{item.part}</Text>
-          <Text style={styles.chevron}>{isExpanded ? '▲' : '▼'}</Text>
+        <TouchableOpacity onPress={() => toggleExpand(item.id)} style={styles.cardHeader} activeOpacity={0.7}>
+          <Text style={[styles.partName, isExpanded && { color: colors.primary }]}>{item.part}</Text>
+          <Ionicons 
+            name={isExpanded ? "chevron-up" : "chevron-down"} 
+            size={20} 
+            color={isExpanded ? colors.primary : colors.textLight} 
+          />
         </TouchableOpacity>
 
         {isExpanded && (
           <View style={styles.details}>
+            {/* MINEURES */}
             {item.minor.length > 0 && (
               <View style={styles.section}>
-                <Text style={styles.minorTitle}>⚠️ MINEURES</Text>
+                <View style={styles.sectionHeader}>
+                  <Ionicons name="warning-outline" size={18} color="#D69E2E" />
+                  <Text style={styles.minorTitle}>Mineures</Text>
+                </View>
                 {item.minor.map((def, idx) => (
                   <Text key={idx} style={styles.defText}>• {def}</Text>
                 ))}
               </View>
             )}
 
+            {/* MAJEURES */}
             {item.major.length > 0 && (
               <View style={styles.section}>
-                <Text style={styles.majorTitle}>⛔ MAJEURES (Interdiction)</Text>
+                <View style={styles.sectionHeader}>
+                  <Ionicons name="hand-left-outline" size={18} color={colors.error} />
+                  <Text style={styles.majorTitle}>Majeures (Interdiction)</Text>
+                </View>
                 {item.major.map((def, idx) => (
                   <Text key={idx} style={styles.defText}>• {def}</Text>
                 ))}
@@ -45,11 +59,7 @@ export default function SafetyCheckScreen() {
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>Guide des Défectuosités</Text>
-        <Text style={styles.headerSub}>Révision Ronde de Sécurité</Text>
-      </View>
+    <View style={globalStyles.container}>
       <FlatList
         data={safetyData}
         keyExtractor={(item) => item.id}
@@ -61,18 +71,31 @@ export default function SafetyCheckScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F5F7FA' },
-  header: { padding: 20, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: '#E2E8F0' },
-  headerTitle: { fontSize: 22, fontWeight: 'bold', color: '#2D3748' },
-  headerSub: { fontSize: 14, color: '#718096' },
   list: { padding: 16 },
-  card: { backgroundColor: 'white', borderRadius: 12, marginBottom: 12, overflow: 'hidden', elevation: 2 },
-  cardHeader: { flexDirection: 'row', justifyContent: 'space-between', padding: 20, alignItems: 'center' },
-  partName: { fontSize: 18, fontWeight: '600', color: '#2D3748' },
-  chevron: { fontSize: 18, color: '#CBD5E0' },
-  details: { padding: 20, paddingTop: 0, backgroundColor: '#FAFAFA' },
-  section: { marginTop: 15 },
-  minorTitle: { fontSize: 14, fontWeight: 'bold', color: '#D69E2E', marginBottom: 6 },
-  majorTitle: { fontSize: 14, fontWeight: 'bold', color: '#E53E3E', marginBottom: 6 },
-  defText: { fontSize: 15, color: '#4A5568', marginBottom: 4, lineHeight: 22 },
+  card: {
+    backgroundColor: colors.card,
+    borderRadius: 8,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: colors.border,
+    overflow: 'hidden',
+    elevation: 1,
+  },
+  cardHeader: { 
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    padding: 18, 
+    alignItems: 'center',
+    backgroundColor: 'white'
+  },
+  partName: { fontSize: 16, fontWeight: '700', color: colors.text },
+  details: { padding: 18, paddingTop: 0, backgroundColor: '#FAFAFA', borderTopWidth: 1, borderTopColor: colors.border },
+  
+  section: { marginTop: 16 },
+  sectionHeader: { flexDirection: 'row', alignItems: 'center', marginBottom: 6, gap: 6 },
+  
+  minorTitle: { fontSize: 14, fontWeight: '700', color: '#D69E2E', textTransform: 'uppercase' },
+  majorTitle: { fontSize: 14, fontWeight: '700', color: colors.error, textTransform: 'uppercase' },
+  
+  defText: { fontSize: 15, color: colors.text, marginBottom: 4, lineHeight: 22, paddingLeft: 8 },
 });
