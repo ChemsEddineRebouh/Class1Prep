@@ -1,0 +1,49 @@
+{
+  "categories": [
+    { "id": "general", "label": "Général & Code", "description": "Règles de base et signalisation" },
+    { "id": "air_brakes", "label": "Freins à air", "description": "Systèmes pneumatiques" },
+    { "id": "safety_round", "label": "Ronde de sécurité", "description": "Inspection avant départ" },
+    { "id": "law_regs", "label": "Lois & Règlements", "description": "Heures de conduite et charges" }
+  ],
+  "questions": [
+    {
+      "id": "q_101",
+      "categoryId": "air_brakes",
+      "question": "Quelle est la perte de pression maximale autorisée en une minute pour un camion tracteur tirant une remorque (freins appliqués) ?",
+      "options": [
+        "20 kPa (3 lb/po2)",
+        "28 kPa (4 lb/po2)",
+        "35 kPa (5 lb/po2)",
+        "42 kPa (6 lb/po2)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pour un train routier, la perte max est de 28 kPa (4 psi) / minute."
+    },
+    {
+      "id": "q_205",
+      "categoryId": "general",
+      "question": "Que devez-vous faire à l'approche d'un panneau indiquant une pente descendante raide ?",
+      "options": [
+        "Accelerer pour monter l'autre côté",
+        "Vérifier les freins et rétrograder",
+        "Mettre les feux de détresse uniquement",
+        "Passer au neutre"
+      ],
+      "correctIndex": 1,
+      "explanation": "Toujours vérifier les freins et choisir un rapport inférieur avant la descente."
+    },
+    {
+      "id": "q_301",
+      "categoryId": "safety_round",
+      "question": "Une fixation de roue manquante est-elle une défectuosité mineure ou majeure ?",
+      "options": [
+        "Mineure",
+        "Majeure",
+        "Aucune des deux",
+        "Cela dépend de la roue"
+      ],
+      "correctIndex": 1,
+      "explanation": "C'est une défectuosité majeure. Interdiction de circuler."
+    }
+  ]
+}
