@@ -1,13 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Alert } from 'react-native';
-import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import _ from 'lodash';
-import { RootStackParamList, Question } from '../types';
-import allData from '../data/questions.json';
+import React, { useState, useEffect } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+  Alert,
+} from "react-native";
+import { useNavigation, useRoute, RouteProp } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import _ from "lodash";
+import { RootStackParamList, Question } from "../types";
+import allData from "../data/questions.json";
+import { saveScore, saveFailedQuestions } from "../utils/storage";
 
-type QuizScreenRouteProp = RouteProp<RootStackParamList, 'Quiz'>;
-type QuizNavProp = NativeStackNavigationProp<RootStackParamList, 'Quiz'>;
+type QuizScreenRouteProp = RouteProp<RootStackParamList, "Quiz">;
+type QuizNavProp = NativeStackNavigationProp<RootStackParamList, "Quiz">;
 
 export default function QuizScreen() {
   const navigation = useNavigation<QuizNavProp>();
@@ -23,12 +31,12 @@ export default function QuizScreen() {
 
   useEffect(() => {
     let qList = allData.questions as Question[];
-    
-    if (categoryId !== 'exam') {
-      qList = qList.filter(q => q.categoryId === categoryId);
+
+    if (categoryId !== "exam") {
+      qList = qList.filter((q) => q.categoryId === categoryId);
     }
 
-    if (mode === 'exam' || categoryId === 'exam') {
+    if (mode === "exam" || categoryId === "exam") {
       qList = _.shuffle(qList).slice(0, 32);
     }
 
@@ -51,29 +59,35 @@ export default function QuizScreen() {
     const isCorrect = index === currentQuestion.correctIndex;
 
     if (isCorrect) {
-      setScore(s => s + 1);
+      setScore((s) => s + 1);
     } else {
-      setErrors(prev => [...prev, currentQuestion]);
+      setErrors((prev) => [...prev, currentQuestion]);
     }
 
-    const delay = mode === 'exam' ? 500 : 1500;
+    const delay = mode === "exam" ? 500 : 1500;
 
     setTimeout(() => {
       if (currentIndex < questions.length - 1) {
-        setCurrentIndex(prev => prev + 1);
+        setCurrentIndex((prev) => prev + 1);
         setSelectedOption(null);
         setIsAnswered(false);
       } else {
-        finishQuiz(isCorrect ? score + 1 : score, isCorrect ? errors : [...errors, currentQuestion]);
+        finishQuiz(
+          isCorrect ? score + 1 : score,
+          isCorrect ? errors : [...errors, currentQuestion],
+        );
       }
     }, delay);
   };
 
-  const finishQuiz = (finalScore: number, finalErrors: Question[]) => {
-    navigation.replace('Result', {
+  const finishQuiz = async (finalScore: number, finalErrors: Question[]) => {
+    await saveScore(categoryId, finalScore, questions.length);
+    await saveFailedQuestions(finalErrors);
+
+    navigation.replace("Result", {
       score: finalScore,
       total: questions.length,
-      errors: finalErrors
+      errors: finalErrors,
     });
   };
 
@@ -87,23 +101,25 @@ export default function QuizScreen() {
         <Text style={styles.progress}>
           Question {currentIndex + 1} / {questions.length}
         </Text>
-        <Text style={styles.mode}>{mode === 'exam' ? 'EXAMEN' : 'PRATIQUE'}</Text>
+        <Text style={styles.mode}>
+          {mode === "exam" ? "EXAMEN" : "PRATIQUE"}
+        </Text>
       </View>
 
       <ScrollView contentContainerStyle={styles.scroll}>
         <Text style={styles.questionText}>{currentQ.question}</Text>
 
         {currentQ.options.map((opt, index) => {
-          let bgColor = 'white';
-          let textColor = '#2D3748';
-          
+          let bgColor = "white";
+          let textColor = "#2D3748";
+
           if (isAnswered) {
             if (index === currentQ.correctIndex) {
-              bgColor = '#C6F6D5'; 
-              textColor = '#22543D';
+              bgColor = "#C6F6D5";
+              textColor = "#22543D";
             } else if (index === selectedOption) {
-              bgColor = '#FED7D7';
-              textColor = '#822727';
+              bgColor = "#FED7D7";
+              textColor = "#822727";
             }
           }
 
@@ -114,12 +130,14 @@ export default function QuizScreen() {
               onPress={() => handleAnswer(index)}
               disabled={isAnswered}
             >
-              <Text style={[styles.optionText, { color: textColor }]}>{opt}</Text>
+              <Text style={[styles.optionText, { color: textColor }]}>
+                {opt}
+              </Text>
             </TouchableOpacity>
           );
         })}
 
-        {isAnswered && mode !== 'exam' && currentQ.explanation && (
+        {isAnswered && mode !== "exam" && currentQ.explanation && (
           <View style={styles.explanationBox}>
             <Text style={styles.explanationTitle}>Explication :</Text>
             <Text style={styles.explanationText}>{currentQ.explanation}</Text>
@@ -131,15 +149,42 @@ export default function QuizScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F5F7FA' },
-  header: { flexDirection: 'row', justifyContent: 'space-between', padding: 20, paddingTop: 10 },
-  progress: { fontSize: 16, fontWeight: 'bold', color: '#718096' },
-  mode: { fontSize: 14, fontWeight: 'bold', color: '#3182CE', textTransform: 'uppercase' },
+  container: { flex: 1, backgroundColor: "#F5F7FA" },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 20,
+    paddingTop: 10,
+  },
+  progress: { fontSize: 16, fontWeight: "bold", color: "#718096" },
+  mode: {
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "#3182CE",
+    textTransform: "uppercase",
+  },
   scroll: { padding: 20 },
-  questionText: { fontSize: 22, fontWeight: 'bold', color: '#2D3748', marginBottom: 30 },
-  option: { padding: 20, borderRadius: 12, marginBottom: 12, borderWidth: 1, borderColor: '#E2E8F0', backgroundColor: 'white' },
+  questionText: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#2D3748",
+    marginBottom: 30,
+  },
+  option: {
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: "#E2E8F0",
+    backgroundColor: "white",
+  },
   optionText: { fontSize: 18 },
-  explanationBox: { marginTop: 20, padding: 15, backgroundColor: '#EBF8FF', borderRadius: 8 },
-  explanationTitle: { fontWeight: 'bold', color: '#2C5282', marginBottom: 5 },
-  explanationText: { color: '#2A4365' }
+  explanationBox: {
+    marginTop: 20,
+    padding: 15,
+    backgroundColor: "#EBF8FF",
+    borderRadius: 8,
+  },
+  explanationTitle: { fontWeight: "bold", color: "#2C5282", marginBottom: 5 },
+  explanationText: { color: "#2A4365" },
 });

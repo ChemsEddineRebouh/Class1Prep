@@ -1,6 +1,6 @@
 export interface InspectionItem {
   id: string;
-  part: string; // ex: "Système de freinage"
+  part: string;
   minor: string[];
   major: string[];
 }
