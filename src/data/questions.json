@@ -6,44 +6,2604 @@
     { "id": "law_regs", "label": "Lois & Règlements", "description": "Heures de conduite et charges" }
   ],
   "questions": [
-    {
-      "id": "q_101",
-      "categoryId": "air_brakes",
-      "question": "Quelle est la perte de pression maximale autorisée en une minute pour un camion tracteur tirant une remorque (freins appliqués) ?",
-      "options": [
-        "20 kPa (3 lb/po2)",
-        "28 kPa (4 lb/po2)",
-        "35 kPa (5 lb/po2)",
-        "42 kPa (6 lb/po2)"
-      ],
-      "correctIndex": 1,
-      "explanation": "Pour un train routier, la perte max est de 28 kPa (4 psi) / minute."
-    },
-    {
-      "id": "q_205",
-      "categoryId": "general",
-      "question": "Que devez-vous faire à l'approche d'un panneau indiquant une pente descendante raide ?",
-      "options": [
-        "Accelerer pour monter l'autre côté",
-        "Vérifier les freins et rétrograder",
-        "Mettre les feux de détresse uniquement",
-        "Passer au neutre"
-      ],
-      "correctIndex": 1,
-      "explanation": "Toujours vérifier les freins et choisir un rapport inférieur avant la descente."
-    },
-    {
-      "id": "q_301",
-      "categoryId": "safety_round",
-      "question": "Une fixation de roue manquante est-elle une défectuosité mineure ou majeure ?",
-      "options": [
-        "Mineure",
-        "Majeure",
-        "Aucune des deux",
-        "Cela dépend de la roue"
-      ],
-      "correctIndex": 1,
-      "explanation": "C'est une défectuosité majeure. Interdiction de circuler."
-    }
-  ]
+  {
+    "id": "pneumatique_01",
+    "categoryId": "air_brakes",
+    "question": "Quel est le rôle principal du compresseur dans le système de freinage pneumatique ?",
+    "options": [
+      "Maintenir la pression d'huile du moteur",
+      "Fournir l'air comprimé nécessaire au système de freinage",
+      "Refroidir les freins lors d'une utilisation intensive",
+      "Activer les ajusteurs de freins automatiques"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le compresseur a pour fonction de pomper et de compresser l'air pour alimenter les réservoirs et assurer le fonctionnement des freins pneumatiques."
+  },
+  {
+    "id": "pneumatique_02",
+    "categoryId": "air_brakes",
+    "question": "À quelle pression maximale le gouverneur (régulateur de pression) doit-il généralement couper le compresseur ?",
+    "options": [
+      "Environ 150 lb/po² (1035 kPa)",
+      "Environ 90 lb/po² (620 kPa)",
+      "Environ 120-125 lb/po² (827-860 kPa)",
+      "Environ 60 lb/po² (414 kPa)"
+    ],
+    "correctIndex": 2,
+    "explanation": "La pression de coupure (cut-out) se situe normalement autour de 120 à 125 lb/po² (environ 825-860 kPa) pour éviter une surpression dans le système."
+  },
+  {
+    "id": "pneumatique_03",
+    "categoryId": "air_brakes",
+    "question": "À quelle pression l'avertisseur de basse pression d'air (témoin sonore ou visuel) doit-il s'activer ?",
+    "options": [
+      "Au-dessous de 100 lb/po² (690 kPa)",
+      "Au-dessous de 80 lb/po² (550 kPa)",
+      "Au-dessous de 60 lb/po² (414 kPa)",
+      "Au-dessous de 20 lb/po² (138 kPa)"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'avertisseur de basse pression doit se déclencher lorsque la pression descend sous un seuil critique, généralement 60 lb/po² (environ 415 kPa), pour alerter le conducteur."
+  },
+  {
+    "id": "pneumatique_04",
+    "categoryId": "air_brakes",
+    "question": "Quel est le but de purger les réservoirs d'air régulièrement ?",
+    "options": [
+      "Augmenter la pression maximale du système",
+      "Évacuer l'eau et l'huile accumulées qui pourraient endommager le système",
+      "Vérifier si le compresseur fonctionne",
+      "Refroidir l'air comprimé"
+    ],
+    "correctIndex": 1,
+    "explanation": "La purge permet d'éliminer la condensation (eau) et les contaminants (huile) qui peuvent causer de la corrosion ou geler en hiver, nuisant au freinage."
+  },
+  {
+    "id": "pneumatique_05",
+    "categoryId": "air_brakes",
+    "question": "Quelle est la méthode recommandée pour vérifier l'ajustement des freins automatiques lors d'un arrêt ?",
+    "options": [
+      "Frapper sur les tambours avec un marteau",
+      "Effectuer une application totale des freins (méthode de la procédure préventive de rattrapage)",
+      "Dévisser les récepteurs de frein",
+      "Augmenter le régime moteur au maximum"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pour les leviers à réglage automatique, une procédure de rattrapage consiste à effectuer des applications franches (env. 120 psi) pour permettre au mécanisme de s'ajuster."
+  },
+  {
+    "id": "pneumatique_06",
+    "categoryId": "air_brakes",
+    "question": "Lors d'une vérification de perte de pression sur un ensemble tracteur et semi-remorque (moteur arrêté, freins desserrés), quelle est la perte maximale tolérée en une minute ?",
+    "options": [
+      "1 lb/po²",
+      "3 lb/po²",
+      "4 lb/po²",
+      "10 lb/po²"
+    ],
+    "correctIndex": 2,
+    "explanation": "Pour un ensemble de véhicules (tracteur + remorque), la perte de pression statique ne doit pas dépasser 4 lb/po² par minute (3 lb/po² pour un véhicule seul)."
+  },
+  {
+    "id": "pneumatique_07",
+    "categoryId": "air_brakes",
+    "question": "À quoi sert le bouton octogonal rouge sur le tableau de bord ?",
+    "options": [
+      "À activer les essuie-glaces",
+      "À alimenter en air la remorque (frein de service)",
+      "À activer les freins de stationnement de la remorque uniquement",
+      "À alimenter en air les freins de la remorque (alimentation d'urgence)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Le bouton rouge est la valve d'alimentation de la remorque. En le tirant, on coupe l'alimentation, ce qui déclenche les freins d'urgence/stationnement de la remorque. En le poussant, on l'alimente."
+  },
+  {
+    "id": "pneumatique_08",
+    "categoryId": "air_brakes",
+    "question": "Que se passe-t-il si la pression d'air dans le système descend à un niveau critique (ex: 20-45 lb/po²) alors que vous roulez ?",
+    "options": [
+      "Le compresseur s'arrête automatiquement",
+      "Les freins de stationnement/urgence (ressorts) vont s'appliquer automatiquement",
+      "Le moteur va s'éteindre",
+      "La transmission va passer au neutre"
+    ],
+    "correctIndex": 1,
+    "explanation": "Si la pression est trop basse pour retenir les ressorts des freins de stationnement, ceux-ci se déploient automatiquement pour immobiliser le véhicule (freinage d'urgence)."
+  },
+  {
+    "id": "pneumatique_09",
+    "categoryId": "air_brakes",
+    "question": "Quelle est la couleur de la conduite d'air (main de frein) correspondant au frein de service (signal) entre le tracteur et la remorque ?",
+    "options": [
+      "Rouge",
+      "Bleue",
+      "Jaune",
+      "Verte"
+    ],
+    "correctIndex": 1,
+    "explanation": "La conduite bleue (Service) transmet le signal de freinage lorsque la pédale est appuyée. La conduite rouge (Urgence) alimente les réservoirs."
+  },
+  {
+    "id": "pneumatique_10",
+    "categoryId": "air_brakes",
+    "question": "Qu'est-ce que le 'fading' ou l'évanouissement des freins ?",
+    "options": [
+      "Une fuite d'air soudaine",
+      "Une perte d'efficacité de freinage due à la surchauffe des tambours",
+      "Un bris du compresseur",
+      "Le gel des conduites d'air"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'évanouissement est la perte de friction causée par une chaleur excessive, souvent due à une utilisation abusive des freins dans une longue descente."
+  },
+  {
+    "id": "pneumatique_11",
+    "categoryId": "air_brakes",
+    "question": "Quelle est la fonction principale de la valve de sûreté installée sur le réservoir d'alimentation ?",
+    "options": [
+      "Empêcher le retour de l'air vers le compresseur",
+      "Évacuer automatiquement l'eau du réservoir",
+      "Protéger le système contre une surpression en s'ouvrant à 150 lb/po²",
+      "Maintenir une pression constante de 90 lb/po²"
+    ],
+    "correctIndex": 2,
+    "explanation": "La valve de sûreté est conçue pour s'ouvrir et laisser échapper l'air si la pression dépasse 150 lb/po², protégeant ainsi le réservoir d'une explosion."
+  },
+  {
+    "id": "pneumatique_12",
+    "categoryId": "air_brakes",
+    "question": "Dans un système de freinage pneumatique, quel réservoir reçoit l'air directement du compresseur ?",
+    "options": [
+      "Le réservoir de service",
+      "Le réservoir secondaire",
+      "Le réservoir humide (réservoir d'alimentation)",
+      "Le réservoir des ressorts"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'air chaud et humide sortant du compresseur va d'abord dans le réservoir humide, où une grande partie de la vapeur d'eau et de l'huile se condense."
+  },
+  {
+    "id": "pneumatique_13",
+    "categoryId": "air_brakes",
+    "question": "Quel composant empêche l'air des réservoirs de service de retourner vers le compresseur en cas de panne de ce dernier ?",
+    "options": [
+      "Le clapet de non-retour",
+      "Le gouverneur",
+      "La valve de relais",
+      "Le robinet de purge"
+    ],
+    "correctIndex": 0,
+    "explanation": "Le clapet de non-retour (check valve) permet à l'air de circuler dans un seul sens (vers les réservoirs) et l'empêche de ressortir en cas de bris en amont."
+  },
+  {
+    "id": "pneumatique_14",
+    "categoryId": "air_brakes",
+    "question": "Lors de la vérification de la montée en pression du compresseur, quel est le délai maximal accepté pour passer de 50 à 90 lb/po² (au régime moteur spécifié) ?",
+    "options": [
+      "1 minute",
+      "2 minutes",
+      "3 minutes",
+      "5 minutes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Le compresseur doit être capable de faire monter la pression de 50 à 90 lb/po² en moins de 3 minutes (moteur à régime élevé ou ralenti accéléré selon le cas)."
+  },
+  {
+    "id": "pneumatique_15",
+    "categoryId": "air_brakes",
+    "question": "Quel est le rôle de la valve de protection du tracteur ?",
+    "options": [
+      "Protéger le moteur du tracteur contre la surchauffe",
+      "Isoler et conserver l'air du tracteur si la remorque se détache ou perd son air",
+      "Empêcher le conducteur d'utiliser les freins de la remorque manuellement",
+      "Augmenter la pression de freinage sur les roues avant"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cette valve se ferme automatiquement (généralement entre 20 et 45 lb/po²) pour empêcher l'air du tracteur de s'échapper en cas de rupture de la conduite de la remorque."
+  },
+  {
+    "id": "pneumatique_16",
+    "categoryId": "air_brakes",
+    "question": "Quelle force mécanique est utilisée pour appliquer les freins de stationnement (Maxibrake) ?",
+    "options": [
+      "La pression d'huile hydraulique",
+      "La pression d'air comprimé",
+      "La force d'un ressort puissant",
+      "La force centrifuge"
+    ],
+    "correctIndex": 2,
+    "explanation": "Les freins de stationnement fonctionnent à l'inverse des freins de service : c'est un ressort puissant qui applique les freins lorsque la pression d'air est évacuée."
+  },
+  {
+    "id": "pneumatique_17",
+    "categoryId": "air_brakes",
+    "question": "Pourquoi est-il déconseillé d'utiliser les freins de stationnement lorsque les freins sont très chauds (après une longue descente) ?",
+    "options": [
+      "Car ils ne fonctionneront pas",
+      "Car les tambours dilatés pourraient se fissurer en refroidissant et en se contractant sur les sabots serrés",
+      "Car cela viderait les réservoirs d'air instantanément",
+      "Car le ressort pourrait casser sous la chaleur"
+    ],
+    "correctIndex": 1,
+    "explanation": "En refroidissant, le tambour métallique se contracte. Si les freins sont serrés fortement par les ressorts, cette contraction peut provoquer la rupture (fissure) du tambour."
+  },
+  {
+    "id": "pneumatique_18",
+    "categoryId": "air_brakes",
+    "question": "Sur un levier de frein (slack adjuster), quel angle la tige de poussée et le levier devraient-ils former lors d'une application des freins bien ajustés ?",
+    "options": [
+      "Environ 45 degrés",
+      "Environ 90 degrés",
+      "Environ 180 degrés",
+      "L'angle n'a pas d'importance"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'efficacité mécanique est maximale lorsque l'angle entre la tige de poussée et le levier est de 90 degrés lors de l'application des freins."
+  },
+  {
+    "id": "pneumatique_19",
+    "categoryId": "air_brakes",
+    "question": "Quel est l'avantage d'un système de freinage pneumatique à double circuit (circuit primaire et secondaire) ?",
+    "options": [
+      "Il permet de freiner deux fois plus fort",
+      "Il empêche l'usure des pneus",
+      "En cas de défaillance d'un circuit, l'autre permet de conserver une capacité de freinage (généralement sur au moins un essieu)",
+      "Il élimine le besoin de purger les réservoirs"
+    ],
+    "correctIndex": 2,
+    "explanation": "Le système double divise les freins (souvent avant/arrière). Si un tuyau brise sur le circuit primaire, le secondaire fonctionne encore pour arrêter le véhicule."
+  },
+  {
+    "id": "pneumatique_20",
+    "categoryId": "air_brakes",
+    "question": "Si vous devez utiliser de l'alcool (méthyl hydrate) dans le système pneumatique l'hiver, où doit-il être introduit ?",
+    "options": [
+      "Directement dans les chambres de frein",
+      "Dans le réservoir de carburant",
+      "Dans l'évaporateur d'alcool ou le réservoir humide",
+      "Dans le filtre à air du moteur"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'alcool sert d'antigel pour l'humidité du système. Il doit être mis dans un dispositif prévu (évaporateur) ou, à défaut, dans le réservoir humide pour se mélanger à l'air."
+  },
+  {
+    "id": "pneumatique_21",
+    "categoryId": "air_brakes",
+    "question": "Quelle est la pression minimale d'enclenchement (cut-in) du gouverneur pour redémarrer le compresseur ?",
+    "options": [
+      "60 lb/po² (414 kPa)",
+      "80-85 lb/po² (550-586 kPa)",
+      "100 lb/po² (690 kPa)",
+      "120 lb/po² (827 kPa)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Le gouverneur doit enclencher le compresseur lorsque la pression descend à un seuil sécuritaire, généralement autour de 100 lb/po² (jamais en dessous de 80 lb/po²)."
+  },
+  {
+    "id": "pneumatique_22",
+    "categoryId": "air_brakes",
+    "question": "Sur un cylindre de frein de type 30 (standard) avec ajusteur manuel, quelle est la limite maximale de la course de la tige de poussée ?",
+    "options": [
+      "1 pouce (25 mm)",
+      "1 ¾ pouce (45 mm)",
+      "2 pouces (51 mm)",
+      "2 ½ pouces (64 mm)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Pour un cylindre de frein standard de type 30, la course ne doit pas dépasser 2 pouces. Au-delà, les freins doivent être réajustés."
+  },
+  {
+    "id": "pneumatique_23",
+    "categoryId": "air_brakes",
+    "question": "Quel est le rôle du système anti-addition (anti-compounding) ?",
+    "options": [
+      "Empêcher l'ajout d'air dans le réservoir humide",
+      "Empêcher l'application simultanée de la force des freins de service et des freins à ressort sur les mêmes roues",
+      "Calculer la charge totale du véhicule",
+      "Empêcher le blocage des roues sur la glace"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'anti-addition empêche d'appliquer une force excessive sur les composants mécaniques (tambours, tiges) en évitant que le frein de service et le frein de stationnement agissent en même temps."
+  },
+  {
+    "id": "pneumatique_24",
+    "categoryId": "air_brakes",
+    "question": "Comment vérifier l'étanchéité des joints (gladhands) entre le tracteur et la remorque ?",
+    "options": [
+      "En appliquant les freins de service et en écoutant s'il y a une fuite d'air aux accouplements",
+      "En versant de l'eau sur les joints",
+      "En tirant sur les boyaux",
+      "En fermant les robinets d'arrêt"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'écoute active près des mains d'accouplement (gladhands) lors d'une application des freins permet de détecter des fuites dues à des joints usés ou mal positionnés."
+  },
+  {
+    "id": "pneumatique_25",
+    "categoryId": "air_brakes",
+    "question": "Quel est le rôle de la came en S (S-cam) dans le freinage ?",
+    "options": [
+      "Comprimer l'air dans la chambre",
+      "Pousser les mâchoires (sabots) contre le tambour lorsque l'arbre tourne",
+      "Refroidir le tambour",
+      "Ajuster la longueur de la tige de poussée"
+    ],
+    "correctIndex": 1,
+    "explanation": "La came en S, en tournant sous l'action du levier, écarte les mâchoires de frein pour les plaquer contre la surface intérieure du tambour."
+  },
+  {
+    "id": "pneumatique_26",
+    "categoryId": "air_brakes",
+    "question": "Si la conduite d'alimentation (rouge) se détache en roulant, que se passe-t-il immédiatement sur la remorque ?",
+    "options": [
+      "Rien, la remorque continue de rouler",
+      "Les freins de service s'appliquent doucement",
+      "Les freins d'urgence (ressorts) de la remorque s'appliquent brusquement",
+      "La remorque se dételle du tracteur"
+    ],
+    "correctIndex": 2,
+    "explanation": "La perte soudaine de pression dans la ligne d'alimentation provoque le déclenchement immédiat des freins d'urgence de la remorque pour l'immobiliser."
+  },
+  {
+    "id": "pneumatique_27",
+    "categoryId": "air_brakes",
+    "question": "À quelle fréquence l'assécheur d'air (air dryer) expulse-t-il l'humidité ?",
+    "options": [
+      "À chaque démarrage du moteur",
+      "Une fois par jour",
+      "Chaque fois que le gouverneur atteint la pression de coupure (cut-out)",
+      "Seulement lors de la maintenance annuelle"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'assécheur purge l'humidité et les contaminants accumulés au moment où le compresseur atteint sa pression maximale et se met en décharge (cycle de purge)."
+  },
+  {
+    "id": "pneumatique_28",
+    "categoryId": "air_brakes",
+    "question": "Qu'indique une tige de poussée qui sort complètement du cylindre de frein lors d'une application ?",
+    "options": [
+      "Les freins sont en excellent état",
+      "Le frein est désajusté ou usé au-delà de la limite (danger de renversement de came)",
+      "La pression d'air est trop forte",
+      "Le ressort de rappel est brisé"
+    ],
+    "correctIndex": 1,
+    "explanation": "Si la tige sort trop loin (overstroke), le freinage devient inefficace et il y a un risque que la came se retourne, bloquant la roue."
+  },
+  {
+    "id": "pneumatique_29",
+    "categoryId": "air_brakes",
+    "question": "Quelle est la couleur des robinets d'arrêt (têtes de chat) situés à l'arrière du tracteur pour les lignes d'air ?",
+    "options": [
+      "Toujours noirs",
+      "Rouge pour l'alimentation (urgence) et Bleu pour le service",
+      "Jaune pour le stationnement et Vert pour le service",
+      "Blanc et Noir"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le code de couleur standardisé est Rouge pour la ligne d'alimentation (Urgence/Emergency) et Bleu pour la ligne de service (Service)."
+  },
+  {
+    "id": "pneumatique_30",
+    "categoryId": "air_brakes",
+    "question": "Pourquoi ne faut-il jamais appuyer sur la pédale de frein lorsque les freins de stationnement à ressort sont appliqués ?",
+    "options": [
+      "Cela use les pneus inutilement",
+      "Cela pourrait endommager les composants de freinage par une force excessive (sauf si muni d'anti-addition)",
+      "Cela vide complètement les réservoirs d'air",
+      "Cela éteint le moteur"
+    ],
+    "correctIndex": 1,
+    "explanation": "Additionner la force du ressort et la force de l'air (si l'anti-addition est absent ou défectueux) peut tordre les tiges de poussée ou fissurer les tambours/chambres."
+  },
+  {
+    "id": "pneumatique_31",
+    "categoryId": "air_brakes",
+    "question": "Comment pouvez-vous identifier visuellement une chambre de frein à longue course (Long Stroke) ?",
+    "options": [
+      "Elle est peinte en rouge",
+      "Elle possède une étiquette trapézoïdale ou des marquages carrés autour des ports d'air",
+      "Elle est deux fois plus grosse qu'une chambre standard",
+      "Elle a des boulons dorés"
+    ],
+    "correctIndex": 1,
+    "explanation": "Les chambres 'Long Stroke' (généralement type 30LS) sont identifiables par une étiquette trapézoïdale (souvent indiquant 2.5 po) ou des embossages carrés/rectangulaires près des entrées d'air."
+  },
+  {
+    "id": "pneumatique_32",
+    "categoryId": "air_brakes",
+    "question": "Quelle est la limite d'ajustement (course maximale) pour une chambre de frein de type 30 à longue course (Long Stroke) ?",
+    "options": [
+      "1 ¾ pouce (45 mm)",
+      "2 pouces (51 mm)",
+      "2 ½ pouces (64 mm)",
+      "3 pouces (76 mm)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Contrairement au type 30 standard (limite à 2 po), le type 30 à longue course tolère une course de tige allant jusqu'à 2 ½ pouces avant de nécessiter un ajustement."
+  },
+  {
+    "id": "pneumatique_33",
+    "categoryId": "air_brakes",
+    "question": "Si la conduite de service (bleue) se rompt ou se débranche pendant la conduite, que se passe-t-il ?",
+    "options": [
+      "Les freins d'urgence de la remorque s'appliquent immédiatement",
+      "Rien ne se passe tant que vous n'appuyez pas sur la pédale de frein",
+      "Le tracteur perd tout son air immédiatement",
+      "Le moteur s'arrête"
+    ],
+    "correctIndex": 1,
+    "explanation": "La conduite bleue ne transporte de l'air que lors du freinage. Si elle brise, l'air ne s'échappera que lorsque vous pèserez sur la pédale, causant alors une perte de pression rapide."
+  },
+  {
+    "id": "pneumatique_34",
+    "categoryId": "air_brakes",
+    "question": "Quel est le danger principal si de l'huile moteur passe du compresseur vers le système pneumatique ?",
+    "options": [
+      "Elle lubrifie les valves, ce qui est bénéfique",
+      "Elle peut former une pâte gommeuse (sludge) qui bloque les valves et empêche le freinage",
+      "Elle augmente la pression d'air trop rapidement",
+      "Elle nettoie les réservoirs"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'huile mélangée à la poussière et à l'eau crée une boue qui peut boucher les orifices des valves, coincer les clapets et endommager les joints d'étanchéité en caoutchouc."
+  },
+  {
+    "id": "pneumatique_35",
+    "categoryId": "air_brakes",
+    "question": "À quoi sert la valve de relay (relais) installée près des essieux arrière ?",
+    "options": [
+      "À ralentir l'application des freins",
+      "À accélérer l'application et le relâchement des freins en fournissant l'air directement d'un réservoir proche",
+      "À remplacer le compresseur",
+      "À mesurer la vitesse des roues"
+    ],
+    "correctIndex": 1,
+    "explanation": "La valve de relais reçoit le signal de la pédale mais puise le gros volume d'air directement dans le réservoir local pour actionner les freins rapidement, évitant le délai de parcours depuis la cabine."
+  },
+  {
+    "id": "pneumatique_36",
+    "categoryId": "air_brakes",
+    "question": "Lors d'un freinage d'urgence avec un système ABS, comment devez-vous utiliser la pédale de frein ?",
+    "options": [
+      "Pomper la pédale rapidement",
+      "Appliquer une pression ferme et constante sans relâcher",
+      "Freiner doucement par petits coups",
+      "Utiliser uniquement le frein à main"
+    ],
+    "correctIndex": 1,
+    "explanation": "Avec l'ABS, il ne faut jamais pomper. On applique une pression maximale et on laisse le système électronique moduler la pression pour éviter le blocage des roues."
+  },
+  {
+    "id": "pneumatique_37",
+    "categoryId": "air_brakes",
+    "question": "Quelle est la fonction du robinet de purge manuel (ou automatique) sur le réservoir humide ?",
+    "options": [
+      "Vérifier la pression du pneu",
+      "Évacuer les liquides (eau/huile) avant qu'ils n'atteignent les autres réservoirs",
+      "Remplir le réservoir d'air",
+      "Ajuster la pression du gouverneur"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le réservoir humide (wet tank) est le premier à recevoir l'air du compresseur. La purge sert à éliminer la condensation avant qu'elle ne contamine le reste du système (réservoirs secs)."
+  },
+  {
+    "id": "pneumatique_38",
+    "categoryId": "air_brakes",
+    "question": "Si vous entendez un sifflement continu provenant du tableau de bord (valve de frein de stationnement) après avoir relâché les freins, quelle peut en être la cause ?",
+    "options": [
+      "Le compresseur fonctionne trop fort",
+      "Une membrane de chambre de frein de stationnement est percée (fuite interne)",
+      "C'est normal, c'est la ventilation",
+      "Le réservoir est vide"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une fuite (backflow) à travers une membrane percée dans la chambre de frein (section ressort) peut remonter jusqu'à la valve de commande au tableau de bord."
+  },
+  {
+    "id": "pneumatique_39",
+    "categoryId": "air_brakes",
+    "question": "Pourquoi est-il important que les boyaux d'air ne frottent pas contre le châssis du camion (deck plate) ?",
+    "options": [
+      "Pour garder les boyaux propres",
+      "Pour éviter l'usure par friction qui pourrait causer une rupture soudaine de la conduite",
+      "Pour améliorer l'aérodynamisme",
+      "Pour éviter de faire du bruit"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le frottement use la couche protectrice du boyau jusqu'à la trame métallique ou le caoutchouc interne, provoquant éventuellement une fuite majeure."
+  },
+  {
+    "id": "pneumatique_40",
+    "categoryId": "air_brakes",
+    "question": "Quelle est la seule utilisation légale et sécuritaire de la valve de commande manuelle (spike/hand valve) ?",
+    "options": [
+      "Pour le stationnement",
+      "Pour ralentir dans les courbes",
+      "Pour vérifier le bon fonctionnement des freins de service de la remorque ou corriger une mise en portefeuille (jackknife) débutante",
+      "Pour économiser les freins du tracteur en ville"
+    ],
+    "correctIndex": 2,
+    "explanation": "La commande manuelle ne doit jamais servir au freinage normal ni au stationnement. Elle sert aux vérifications ou, exceptionnellement, à étirer l'attelage."
+  },
+  {
+    "id": "pneumatique_41",
+    "categoryId": "air_brakes",
+    "question": "Quel est le rôle de la valve de décharge rapide (quick release valve) généralement située près de l'essieu avant ?",
+    "options": [
+      "Augmenter la pression de freinage sur les roues avant",
+      "Permettre à l'air de s'échapper rapidement des chambres de frein avant pour relâcher les freins plus vite",
+      "Empêcher le blocage des roues",
+      "Remplacer l'ABS sur les vieux camions"
+    ],
+    "correctIndex": 1,
+    "explanation": "La valve de décharge rapide permet d'évacuer l'air des cylindres directement à l'essieu plutôt que de le faire remonter jusqu'à la pédale, accélérant le relâchement des freins."
+  },
+  {
+    "id": "pneumatique_42",
+    "categoryId": "air_brakes",
+    "question": "Que signifie l'allumage du témoin lumineux ABS jaune sur la remorque pendant la conduite ?",
+    "options": [
+      "Le système de freinage est totalement défaillant",
+      "Le système ABS est défectueux, mais les freins pneumatiques fonctionneront comme des freins standard",
+      "La remorque va se détacher",
+      "Il faut s'arrêter immédiatement sur l'accotement"
+    ],
+    "correctIndex": 1,
+    "explanation": "Si l'ABS tombe en panne, le témoin s'allume pour avertir le conducteur, mais le système pneumatique de base continue de fonctionner normalement (sans l'antiblocage)."
+  },
+  {
+    "id": "pneumatique_43",
+    "categoryId": "air_brakes",
+    "question": "Qu'est-ce que le 'délai de freinage' (brake lag) dans un système pneumatique ?",
+    "options": [
+      "Le temps que le conducteur prend pour voir le danger",
+      "Le temps nécessaire (environ 0,4 seconde) pour que l'air parcoure le circuit et atteigne les chambres de frein après avoir appuyé sur la pédale",
+      "Le temps que les freins prennent pour refroidir",
+      "Un défaut du compresseur"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'air est compressible et prend du temps à circuler. Ce délai physique (environ 4/10e de seconde) s'ajoute au temps de réaction du conducteur."
+  },
+  {
+    "id": "pneumatique_44",
+    "categoryId": "air_brakes",
+    "question": "Si vous croisez les mains d'accouplement (brancher la ligne de service sur l'urgence et vice-versa) sur une remorque standard, quel sera le résultat probable ?",
+    "options": [
+      "Les freins de la remorque fonctionneront normalement",
+      "Les freins à ressort de la remorque ne se relâcheront pas (pas d'alimentation en air dans le bon circuit)",
+      "La remorque n'aura pas de feux de freinage",
+      "Le compresseur va exploser"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'air ne pourra pas remplir les réservoirs par la ligne d'urgence (puisque branchée sur le service qui est vide au repos), donc les ressorts resteront appliqués."
+  },
+  {
+    "id": "pneumatique_45",
+    "categoryId": "air_brakes",
+    "question": "Quelle est la principale raison pour laquelle il est interdit de régler manuellement des ajusteurs de freins automatiques (sauf lors de l'installation ou d'une réparation majeure) ?",
+    "options": [
+      "C'est trop difficile à faire",
+      "Cela peut masquer un problème mécanique sous-jacent (ajusteur défectueux) qui réapparaîtra rapidement",
+      "Cela use les clés à cliquet",
+      "L'air s'échapperait"
+    ],
+    "correctIndex": 1,
+    "explanation": "Si un ajusteur automatique se désajuste, c'est qu'il est brisé ou mal installé. Le réajuster manuellement ne règle pas le problème et donne un faux sentiment de sécurité."
+  },
+  {
+    "id": "pneumatique_46",
+    "categoryId": "air_brakes",
+    "question": "Quel composant active les feux de freinage (lumières rouges) à l'arrière du véhicule lors d'une application des freins ?",
+    "options": [
+      "Le compresseur",
+      "Le manocontact (interrupteur pneumatique) activé par la pression d'air lors de l'application",
+      "Le gouverneur",
+      "La came en S"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un capteur de pression (stop light switch) détecte la présence d'air dans le circuit d'application et ferme le circuit électrique pour allumer les feux."
+  },
+  {
+    "id": "pneumatique_47",
+    "categoryId": "air_brakes",
+    "question": "Si le réchauffeur de l'assécheur d'air (air dryer heater) est défectueux en hiver, quel est le risque principal ?",
+    "options": [
+      "Le moteur va surchauffer",
+      "La valve de purge de l'assécheur peut geler en position ouverte (fuite massive) ou fermée (accumulation d'eau)",
+      "L'air deviendra trop chaud",
+      "Le compresseur ne démarrera pas"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le réchauffeur empêche l'humidité expulsée de geler au niveau de la valve de purge. Si elle gèle, l'assécheur ne peut plus fonctionner correctement."
+  },
+  {
+    "id": "pneumatique_48",
+    "categoryId": "air_brakes",
+    "question": "Pourquoi les réservoirs d'air sont-ils munis de cloisons ou de srtuctures renforcées ?",
+    "options": [
+      "Pour améliorer l'aérodynamisme",
+      "Pour résister à la haute pression (jusqu'à 150 psi et plus en test) sans se déformer",
+      "Pour séparer l'huile de l'eau",
+      "Pour réduire le bruit de l'air"
+    ],
+    "correctIndex": 1,
+    "explanation": "Les réservoirs sont des récipients sous pression soumis à des normes strictes pour éviter l'explosion. Ils doivent résister à des pressions bien supérieures à la pression de service."
+  },
+  {
+    "id": "pneumatique_49",
+    "categoryId": "air_brakes",
+    "question": "Quel type de lubrifiant ne doit jamais être utilisé pour nettoyer ou lubrifier les joints des mains d'accouplement (gladhands) ?",
+    "options": [
+      "De l'eau savonneuse",
+      "Un lubrifiant à base de silicone",
+      "De l'huile, de la graisse ou tout produit pétrolier",
+      "De l'alcool méthylique"
+    ],
+    "correctIndex": 2,
+    "explanation": "Les produits pétroliers attaquent le caoutchouc des joints d'étanchéité, les faisant gonfler ou se désintégrer, ce qui cause des fuites."
+  },
+  {
+    "id": "pneumatique_50",
+    "categoryId": "air_brakes",
+    "question": "Sur un véhicule combiné, si vous fermez le robinet d'arrêt de la ligne de service à l'arrière de la première remorque (train double), que se passe-t-il pour la deuxième remorque ?",
+    "options": [
+      "Elle freine normalement",
+      "Elle n'aura plus de freins de service (les freins ne s'appliqueront pas lors de l'appui sur la pédale)",
+      "Ses freins d'urgence s'appliquent",
+      "Rien ne change"
+    ],
+    "correctIndex": 1,
+    "explanation": "En fermant le robinet de service, vous coupez le signal de freinage vers l'arrière. La deuxième remorque roulera sans freins de service, ce qui est extrêmement dangereux."
+  },
+  {
+    "id": "heures_01",
+    "categoryId": "law_regs",
+    "question": "Dans le cycle 1, quel est le nombre maximal d'heures de travail (conduite + travail autre) permis en 7 jours ?",
+    "options": [
+      "60 heures",
+      "70 heures",
+      "80 heures",
+      "120 heures"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le cycle 1 limite le total des heures de travail à 70 heures sur une période de 7 jours consécutifs."
+  },
+  {
+    "id": "heures_02",
+    "categoryId": "law_regs",
+    "question": "Quelle est la durée minimale de repos quotidien obligatoire pour un conducteur de véhicule lourd ?",
+    "options": [
+      "8 heures",
+      "9 heures",
+      "10 heures",
+      "12 heures"
+    ],
+    "correctIndex": 2,
+    "explanation": "Un conducteur doit prendre au moins 10 heures de repos par jour, dont au moins 8 heures consécutives (plus 2 heures qui peuvent être réparties)."
+  },
+  {
+    "id": "heures_03",
+    "categoryId": "law_regs",
+    "question": "Quel est le nombre maximal d'heures de CONDUITE permises dans un poste de travail (journée) ?",
+    "options": [
+      "12 heures",
+      "13 heures",
+      "14 heures",
+      "16 heures"
+    ],
+    "correctIndex": 1,
+    "explanation": "La limite maximale de conduite est de 13 heures. Après 13 heures de conduite, le conducteur doit prendre ses 8 heures de repos consécutives."
+  },
+  {
+    "id": "heures_04",
+    "categoryId": "law_regs",
+    "question": "Pour remettre à zéro le cumul des heures du Cycle 1, combien d'heures de repos consécutives un conducteur doit-il prendre ?",
+    "options": [
+      "24 heures",
+      "36 heures",
+      "48 heures",
+      "72 heures"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un conducteur peut remettre son cycle 1 à zéro en prenant une période de repos continue d'au moins 36 heures."
+  },
+  {
+    "id": "heures_05",
+    "categoryId": "law_regs",
+    "question": "Dans le cycle 2, quelle est la limite d'heures de travail sur une période de 14 jours ?",
+    "options": [
+      "70 heures",
+      "100 heures",
+      "120 heures",
+      "160 heures"
+    ],
+    "correctIndex": 2,
+    "explanation": "Le cycle 2 permet jusqu'à 120 heures de travail réparties sur 14 jours, avec des exigences de repos spécifiques (24h de repos après 70h)."
+  },
+  {
+    "id": "heures_06",
+    "categoryId": "law_regs",
+    "question": "Quelle est l'amplitude maximale (période durant laquelle un conducteur peut conduire ou travailler) dans une journée ?",
+    "options": [
+      "13 heures",
+      "14 heures",
+      "16 heures",
+      "18 heures"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'amplitude du poste de travail (le temps écoulé entre la première heure de travail et la dernière) ne doit pas dépasser 16 heures."
+  },
+  {
+    "id": "heures_07",
+    "categoryId": "law_regs",
+    "question": "Dans le cycle 2, quelle est la durée de repos consécutive requise pour remettre le cycle à zéro ?",
+    "options": [
+      "24 heures",
+      "36 heures",
+      "48 heures",
+      "72 heures"
+    ],
+    "correctIndex": 3,
+    "explanation": "Pour réinitialiser le cumul des heures dans le cycle 2 (14 jours), le conducteur doit prendre 72 heures de repos consécutives."
+  },
+  {
+    "id": "heures_08",
+    "categoryId": "law_regs",
+    "question": "Combien d'heures de travail (conduite + autre tâches) sont permises au maximum dans une 'fenêtre' de 16 heures ?",
+    "options": [
+      "12 heures",
+      "13 heures",
+      "14 heures",
+      "16 heures"
+    ],
+    "correctIndex": 2,
+    "explanation": "Un conducteur ne peut pas travailler plus de 14 heures au total à l'intérieur de sa fenêtre d'amplitude de 16 heures."
+  },
+  {
+    "id": "heures_09",
+    "categoryId": "law_regs",
+    "question": "Dans le cycle 2, après avoir accumulé 70 heures de travail, combien d'heures de repos consécutives le conducteur doit-il prendre obligatoirement ?",
+    "options": [
+      "10 heures",
+      "24 heures",
+      "36 heures",
+      "8 heures"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le cycle 2 impose une pause obligatoire de 24 heures consécutives dès que le conducteur atteint 70 heures de travail sur une période donnée."
+  },
+  {
+    "id": "heures_10",
+    "categoryId": "law_regs",
+    "question": "Si vous utilisez la couchette, quelle est la durée minimale d'une période pour qu'elle soit comptabilisée dans le fractionnement des heures de repos ?",
+    "options": [
+      "30 minutes",
+      "1 heure",
+      "2 heures",
+      "4 heures"
+    ],
+    "correctIndex": 2,
+    "explanation": "Lors du fractionnement des heures de repos en couchette, chaque période doit durer au moins 2 heures (et le total doit respecter les normes)."
+  },
+  {
+    "id": "heures_11",
+    "categoryId": "law_regs",
+    "question": "Pendant combien de temps devez-vous conserver les copies de vos fiches journalières (logbook) au terminus principal après les avoir remises ?",
+    "options": [
+      "3 mois",
+      "6 mois",
+      "12 mois",
+      "24 mois"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'exploitant doit conserver les fiches journalières et les documents justificatifs pendant une période minimale de 6 mois."
+  },
+  {
+    "id": "heures_12",
+    "categoryId": "law_regs",
+    "question": "Si vous conduisez le camion à des fins personnelles (utilisation personnelle), quelle est la distance maximale permise par jour pour que ce temps soit compté comme 'hors service' ?",
+    "options": [
+      "50 km",
+      "75 km",
+      "100 km",
+      "Il n'y a pas de limite si le camion est vide"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un conducteur peut utiliser un véhicule déchargé pour des fins personnelles sur une distance maximale de 75 km par jour tout en comptabilisant ce temps comme du repos."
+  },
+  {
+    "id": "heures_13",
+    "categoryId": "law_regs",
+    "question": "Combien de jours de fiches journalières précédentes devez-vous avoir en votre possession dans le camion (en plus de la journée en cours) ?",
+    "options": [
+      "7 jours",
+      "10 jours",
+      "14 jours",
+      "30 jours"
+    ],
+    "correctIndex": 2,
+    "explanation": "Lors d'un contrôle routier, vous devez présenter la fiche de la journée en cours ainsi que celles des 14 jours précédents."
+  },
+  {
+    "id": "heures_14",
+    "categoryId": "law_regs",
+    "question": "Comment est classé le temps passé à effectuer la ronde de sécurité (inspection avant départ) ?",
+    "options": [
+      "Repos (Hors service)",
+      "Conduite",
+      "Travail (En service, autre que la conduite)",
+      "Temps d'attente"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'inspection, le chargement, le déchargement et l'attente (si on est responsable du véhicule) sont considérés comme du temps de travail (En service), qui compte dans le total des heures de travail."
+  },
+  {
+    "id": "heures_15",
+    "categoryId": "law_regs",
+    "question": "En cas de mauvaises conditions de la route imprévues (tempête soudaine), de combien de temps pouvez-vous prolonger votre temps de conduite pour atteindre un endroit sûr ?",
+    "options": [
+      "1 heure",
+      "2 heures",
+      "3 heures",
+      "Aucune prolongation permise"
+    ],
+    "correctIndex": 1,
+    "explanation": "La réglementation permet une prolongation maximale de 2 heures de conduite (et de travail) en cas d'urgence ou de conditions météorologiques défavorables imprévues."
+  },
+  {
+    "id": "heures_16",
+    "categoryId": "law_regs",
+    "question": "Pour passer du Cycle 1 au Cycle 2, quelles sont les conditions requises ?",
+    "options": [
+      "Prendre 24 heures de repos",
+      "Prendre 36 heures de repos consécutives",
+      "Prendre 72 heures de repos consécutives",
+      "C'est impossible de changer de cycle"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le passage du Cycle 1 (70h/7 jours) vers le Cycle 2 (120h/14 jours) exige la prise d'une période de repos de 36 heures consécutives (le 'reset' du cycle 1)."
+  },
+  {
+    "id": "heures_17",
+    "categoryId": "law_regs",
+    "question": "Dans le cas du fractionnement des heures de repos en couchette (team driving ou solo), le total des deux périodes doit être d'au moins combien ?",
+    "options": [
+      "8 heures",
+      "9 heures",
+      "10 heures",
+      "12 heures"
+    ],
+    "correctIndex": 2,
+    "explanation": "Les deux périodes passées en couchette (dont aucune n'est inférieure à 2h) doivent totaliser au moins 10 heures pour être valides selon la réglementation fédérale."
+  },
+  {
+    "id": "heures_18",
+    "categoryId": "law_regs",
+    "question": "Est-il permis de différer (reporter) une partie des heures de repos quotidien obligatoire ?",
+    "options": [
+      "Non, jamais",
+      "Oui, jusqu'à 2 heures peuvent être reportées au jour suivant, sous certaines conditions strictes",
+      "Oui, on peut reporter 4 heures",
+      "Oui, si on conduit moins de 10 heures"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un conducteur peut reporter jusqu'à 2 heures de son repos quotidien au jour suivant, mais le temps reporté doit être pris en plus du repos obligatoire du lendemain."
+  },
+  {
+    "id": "heures_19",
+    "categoryId": "law_regs",
+    "question": "Si vous traversez le 60e parallèle (Grand Nord), comment changent les heures de service ?",
+    "options": [
+      "Elles sont les mêmes",
+      "Le nombre d'heures de conduite permises augmente (ex: 15 heures de conduite)",
+      "Le repos obligatoire diminue à 4 heures",
+      "Le logbook n'est plus obligatoire"
+    ],
+    "correctIndex": 1,
+    "explanation": "Au nord du 60e parallèle, les limites sont augmentées : 15 heures de conduite et 18 heures d'amplitude, en raison des distances et du manque d'infrastructures."
+  },
+  {
+    "id": "heures_20",
+    "categoryId": "law_regs",
+    "question": "Lequel des éléments suivants doit OBLIGATOIREMENT figurer sur la fiche journalière (logbook) ?",
+    "options": [
+      "Le nom du mécanicien",
+      "La plaque d'immatriculation du véhicule ou de la remorque",
+      "La marque des pneus",
+      "Le prix du carburant"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'identification des véhicules (numéro d'unité ou plaque) est une mention obligatoire, tout comme la date, le nom du conducteur, l'odomètre, etc."
+  },
+  {
+    "id": "heures_21",
+    "categoryId": "law_regs",
+    "question": "Concernant les documents justificatifs (reçus de carburant, ponts, repas, etc.), quelle est la règle ?",
+    "options": [
+      "On peut les jeter après la journée",
+      "Le conducteur doit les conserver pour les remettre à l'exploitant, qui les gardera 6 mois pour corroborer les fiches journalières",
+      "Seuls les reçus de plus de 100$ sont requis",
+      "Il n'est pas nécessaire de les garder"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tous les documents permettant de localiser le véhicule et de valider les heures inscrites au logbook doivent être conservés et remis à l'entreprise."
+  },
+  {
+    "id": "heures_22",
+    "categoryId": "law_regs",
+    "question": "Quelle exemption s'applique aux conducteurs de véhicules d'urgence ou de secours (ex: déneigement, rétablissement de l'électricité) ?",
+    "options": [
+      "Aucune exemption",
+      "Ils ne sont pas soumis aux limites d'heures de conduite et de repos lors d'une intervention d'urgence",
+      "Ils ont droit à 20 heures de conduite",
+      "Ils doivent dormir dans le camion"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lorsqu'ils répondent à une situation d'urgence réelle (sinistre, panne majeure), ces conducteurs sont exemptés des règles standards pour la durée de l'urgence."
+  },
+  {
+    "id": "heures_23",
+    "categoryId": "law_regs",
+    "question": "Si un conducteur utilise un traversier (ferry) pour un trajet de plus de 5 heures, comment peut-il comptabiliser ce temps ?",
+    "options": [
+      "Comme du temps de conduite",
+      "Comme du repos (hors service), même s'il ne dort pas",
+      "Comme du repos, à condition d'avoir accès à une couchette ou une cabine",
+      "Comme du temps d'attente (en service)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Le temps passé sur un traversier peut être compté comme une partie des 8 heures de repos obligatoire si le conducteur a accès à une couchette (dans le camion ou sur le navire)."
+  },
+  {
+    "id": "heures_24",
+    "categoryId": "law_regs",
+    "question": "Un dispositif de consignation électronique (DCE / ELD) est-il obligatoire pour les camions de location à court terme (moins de 30 jours) ?",
+    "options": [
+      "Oui, toujours",
+      "Non, une exemption existe souvent pour les locations de moins de 30 jours (selon la juridiction, vérifier le contrat)",
+      "Seulement si le camion est rouge",
+      "Oui, mais on peut utiliser un logbook papier en tout temps"
+    ],
+    "correctIndex": 1,
+    "explanation": "Il existe des exemptions à l'utilisation du DCE (ELD), notamment pour les locations de courte durée (moins de 30 jours), où la fiche papier est permise."
+  },
+  {
+    "id": "heures_25",
+    "categoryId": "law_regs",
+    "question": "Que devez-vous faire si votre dispositif de consignation électronique (DCE) tombe en panne en cours de route ?",
+    "options": [
+      "Arrêter de conduire immédiatement",
+      "Utiliser des fiches journalières papier pour consigner les heures et faire réparer le DCE dans les 14 jours (ou dès le retour au terminus)",
+      "Continuer sans rien noter",
+      "Utiliser le chronomètre de votre téléphone"
+    ],
+    "correctIndex": 1,
+    "explanation": "En cas de défaillance du DCE, le conducteur doit passer au format papier (logbook) et signaler le bris à l'exploitant pour réparation rapide."
+  },
+  {
+    "id": "signalisation_01",
+    "categoryId": "law_regs",
+    "question": "Selon la 'règle des secondes' pour la distance de suivi, quel intervalle minimum devez-vous laisser pour un véhicule de 18 mètres ?",
+    "options": [
+      "3 secondes",
+      "4 secondes",
+      "6 secondes",
+      "10 secondes"
+    ],
+    "correctIndex": 2,
+    "explanation": "La règle suggère 1 seconde d'intervalle pour chaque tranche de 3 mètres de longueur. Pour 18m : 18 / 3 = 6 secondes."
+  },
+  {
+    "id": "signalisation_02",
+    "categoryId": "law_regs",
+    "question": "Que devez-vous faire à la vue d'un panneau 'Aire de vérification des freins' si votre véhicule pèse plus de 3000 kg ?",
+    "options": [
+      "Ralentir seulement",
+      "Arrêter uniquement si les freins semblent chauds",
+      "Vous immobiliser obligatoirement pour vérifier l'état des freins",
+      "Continuer si vous avez des freins ABS"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'arrêt est obligatoire pour tout véhicule de plus de 3000 kg afin de vérifier le bon fonctionnement et l'ajustement des freins avant une pente prononcée."
+  },
+  {
+    "id": "signalisation_03",
+    "categoryId": "law_regs",
+    "question": "Quel panneau indique une interdiction de passage aux véhicules transportant des matières dangereuses ?",
+    "options": [
+      "Un cercle rouge barré avec un symbole de camion",
+      "Un losange noir sur fond blanc",
+      "Un cercle rouge barré avec un symbole de losange (placard)",
+      "Un carré vert avec un camion"
+    ],
+    "correctIndex": 2,
+    "explanation": "Le panneau d'interdiction pour matières dangereuses montre le symbole de losange (placard) dans un cercle d'interdiction rouge."
+  },
+  {
+    "id": "signalisation_04",
+    "categoryId": "law_regs",
+    "question": "Comment la distance de freinage est-elle affectée si vous doublez votre vitesse (ex: de 50 à 100 km/h) ?",
+    "options": [
+      "Elle double",
+      "Elle triple",
+      "Elle quadruple",
+      "Elle reste la même"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'énergie cinétique quadruple quand la vitesse double, donc la distance de freinage est multipliée par quatre."
+  },
+  {
+    "id": "signalisation_05",
+    "categoryId": "law_regs",
+    "question": "Que signifie un panneau jaune en forme de losange montrant un camion basculant vers l'arrière sur un triangle ?",
+    "options": [
+      "Risque de vents latéraux",
+      "Entrée de camions",
+      "Pente descendante forte (risque d'emballement)",
+      "Rampe de détresse ou lit d'arrêt"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ce panneau avertit d'une pente descendante abrupte, incitant le conducteur à vérifier ses freins et à rétrograder avant la descente."
+  },
+  {
+    "id": "signalisation_06",
+    "categoryId": "law_regs",
+    "question": "Que signifie un panneau losange jaune indiquant une hauteur (ex: 4,1 m) avec des flèches en haut et en bas ?",
+    "options": [
+      "La hauteur minimale requise pour passer",
+      "La hauteur libre (espace disponible) sous un obstacle à venir",
+      "La hauteur maximale permise pour le chargement",
+      "La longueur du pont"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ce panneau de danger indique la hauteur libre réelle sous un viaduc ou un tunnel. Si votre véhicule dépasse cette hauteur, vous ne passerez pas."
+  },
+  {
+    "id": "signalisation_07",
+    "categoryId": "law_regs",
+    "question": "Quelle est l'influence du poids du véhicule lourd sur la distance de freinage ?",
+    "options": [
+      "Aucune influence",
+      "Un véhicule lourd freine plus court qu'un léger",
+      "Plus le véhicule est lourd, plus la distance de freinage augmente",
+      "Plus le véhicule est lourd, plus les freins chauffent, mais la distance reste la même"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'augmentation de la masse augmente l'énergie cinétique à dissiper. Par conséquent, la distance de freinage augmente avec la charge."
+  },
+  {
+    "id": "signalisation_08",
+    "categoryId": "law_regs",
+    "question": "Qu'est-ce que l'aquaplanage et comment l'éviter ?",
+    "options": [
+      "Une perte de direction due au vent; il faut accélérer",
+      "Une perte d'adhérence due à une couche d'eau entre le pneu et la route; il faut ralentir",
+      "Le gel des freins par l'eau; il faut freiner fort",
+      "Un dérapage sur la glace uniquement"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'aquaplanage survient quand les pneus ne peuvent plus évacuer l'eau, soulevant le véhicule. La seule prévention efficace est de réduire sa vitesse."
+  },
+  {
+    "id": "signalisation_09",
+    "categoryId": "law_regs",
+    "question": "Que signifie un panneau rectangulaire blanc avec un cercle vert contenant une flèche ?",
+    "options": [
+      "Suggestion de direction",
+      "Obligation de suivre la direction indiquée",
+      "Interdiction de tourner",
+      "Stationnement permis"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le cercle vert sur fond blanc est un panneau de prescription indiquant une obligation. Vous devez suivre la direction de la flèche."
+  },
+  {
+    "id": "signalisation_10",
+    "categoryId": "law_regs",
+    "question": "Lors d'un virage à droite avec un long véhicule, pourquoi faut-il surveiller l'arrière droit (effet de balayage) ?",
+    "options": [
+      "Pour éviter que l'arrière ne touche le trottoir ou un autre véhicule à l'intérieur du virage",
+      "Pour vérifier si les feux de freinage fonctionnent",
+      "Pour s'assurer que la remorque ne décroche pas",
+      "Pour voir si la porte est ouverte"
+    ],
+    "correctIndex": 0,
+    "explanation": "Les roues arrière d'un véhicule long suivent une trajectoire plus courte que les roues avant (off-tracking), risquant d'écraser ce qui se trouve à l'intérieur du virage (piétons, poteaux, voitures)."
+  },
+  {
+    "id": "signalisation_11",
+    "categoryId": "law_regs",
+    "question": "Que signifie un panneau orange en forme de losange avec deux flèches noires opposées séparées par un îlot ?",
+    "options": [
+      "Chaussée glissante",
+      "Début d'un terre-plein central (circulation à double sens divisée)",
+      "Fin de la route",
+      "Pont étroit"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ce panneau indique que la route à double sens sera bientôt séparée par un obstacle physique (terre-plein) et que vous devez garder la droite."
+  },
+  {
+    "id": "signalisation_12",
+    "categoryId": "law_regs",
+    "question": "Quelle est la règle concernant les passages à niveau (voies ferrées) pour un véhicule transportant des matières dangereuses ?",
+    "options": [
+      "Ralentir à 20 km/h",
+      "Klaxonner avant de traverser",
+      "S'immobiliser obligatoirement entre 5 et 15 mètres du rail",
+      "Traverser le plus vite possible"
+    ],
+    "correctIndex": 2,
+    "explanation": "Les autobus et les véhicules transportant des matières dangereuses doivent obligatoirement s'arrêter avant tout passage à niveau non contrôlé par des barrières pour vérifier l'absence de train."
+  },
+  {
+    "id": "signalisation_13",
+    "categoryId": "law_regs",
+    "question": "Qu'est-ce que le 'temps de perception et de réaction' moyen avant de commencer à freiner ?",
+    "options": [
+      "Environ 0,5 seconde",
+      "Environ 1,5 seconde",
+      "Environ 4 secondes",
+      "C'est instantané"
+    ],
+    "correctIndex": 1,
+    "explanation": "Il faut en moyenne ¾ de seconde pour percevoir le danger et ¾ de seconde pour réagir (bouger le pied), soit environ 1,5 seconde au total avant que le freinage ne commence."
+  },
+  {
+    "id": "signalisation_14",
+    "categoryId": "law_regs",
+    "question": "Sur une autoroute à trois voies dans la même direction, dans quelle voie un véhicule lourd doit-il circuler normalement ?",
+    "options": [
+      "La voie de gauche uniquement",
+      "La voie du centre ou de droite",
+      "N'importe quelle voie",
+      "La voie de droite uniquement, sauf pour dépasser"
+    ],
+    "correctIndex": 1,
+    "explanation": "Au Québec, sur une autoroute à trois voies ou plus, les véhicules lourds n'ont pas le droit de circuler dans la voie de gauche (sauf indication contraire)."
+  },
+  {
+    "id": "signalisation_15",
+    "categoryId": "law_regs",
+    "question": "Que devez-vous faire si vous voyez un panneau rectangulaire vert indiquant 'Vérification des freins' AVANT une pente ?",
+    "options": [
+      "C'est une suggestion pour les débutants",
+      "Vous devez vous arrêter seulement si vous êtes chargé",
+      "Vous devez obligatoirement vous arrêter dans l'aire prévue pour vérifier l'état et l'ajustement de vos freins",
+      "Vous devez rétrograder sans arrêter"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'arrêt est obligatoire pour tous les véhicules lourds visés. Le conducteur doit sortir mesurer la course des tiges ou vérifier le système avant d'engager la descente."
+  },
+  {
+    "id": "signalisation_16",
+    "categoryId": "law_regs",
+    "question": "Quelle est la forme d'un panneau 'Cédez le passage' ?",
+    "options": [
+      "Octogone rouge",
+      "Triangle inversé (pointe en bas) bordé de rouge",
+      "Losange jaune",
+      "Rond jaune"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le triangle inversé est universellement utilisé pour signifier 'Cédez le passage' à la circulation prioritaire."
+  },
+  {
+    "id": "signalisation_17",
+    "categoryId": "law_regs",
+    "question": "Que signifie un panneau carré blanc avec un cercle vert contenant un camion lourd ?",
+    "options": [
+      "Stationnement interdit aux camions",
+      "Route obligatoire pour les véhicules lourds (voie de camionnage)",
+      "Zone de livraison seulement",
+      "Entrée interdite aux camions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le cercle vert est une obligation. Ce panneau indique l'itinéraire obligatoire pour les véhicules lourds (ou que la voie est réservée aux camions)."
+  },
+  {
+    "id": "signalisation_18",
+    "categoryId": "law_regs",
+    "question": "Quelle est la principale cause de renversement d'un camion dans une courbe ?",
+    "options": [
+      "Le vent de face",
+      "Le centre de gravité élevé combiné à une vitesse excessive (force centrifuge)",
+      "Les freins trop froids",
+      "La direction assistée défectueuse"
+    ],
+    "correctIndex": 1,
+    "explanation": "Les véhicules lourds ont un centre de gravité haut. La force centrifuge dans une courbe pousse le véhicule vers l'extérieur ; si la vitesse est trop grande, il verse."
+  },
+  {
+    "id": "signalisation_19",
+    "categoryId": "law_regs",
+    "question": "Que signifie un panneau jaune avec une flèche courbée et l'indication '40 km/h' en dessous ?",
+    "options": [
+      "Vitesse minimale obligatoire",
+      "Vitesse recommandée pour négocier la courbe en sécurité",
+      "Distance jusqu'au prochain village",
+      "Vitesse maximale permise sur l'autoroute"
+    ],
+    "correctIndex": 1,
+    "explanation": "Les panneaux de vitesse jaunes sont des avertissements. Ils indiquent la vitesse recommandée pour effectuer la manœuvre (courbe/bretelle) sans risque de renversement ou de dérapage."
+  },
+  {
+    "id": "signalisation_20",
+    "categoryId": "law_regs",
+    "question": "Dans une zone de travaux routiers, si l'amende pour excès de vitesse est doublée, qu'arrive-t-il aux points d'inaptitude ?",
+    "options": [
+      "Ils sont doublés aussi",
+      "Ils restent les mêmes",
+      "Ils sont annulés",
+      "Ils sont triplés"
+    ],
+    "correctIndex": 1,
+    "explanation": "Au Québec, dans les zones de chantiers routiers signalées, seule l'amende est doublée. Le nombre de points d'inaptitude inscrits au dossier reste le même."
+  },
+  {
+    "id": "signalisation_21",
+    "categoryId": "law_regs",
+    "question": "Que indique un panneau 'Rampe de détresse' ou 'Lit d'arrêt' ?",
+    "options": [
+      "Une aire de repos pour dormir",
+      "Une voie de sortie d'urgence remplie de gravier pour arrêter un véhicule dont les freins ont lâché dans une pente",
+      "Un endroit pour vérifier les freins",
+      "Une voie réservée aux autobus"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le lit d'arrêt est une infrastructure de sécurité critique conçue pour arrêter physiquement un camion en détresse (perte de freins) grâce à la résistance du gravier."
+  },
+  {
+    "id": "signalisation_22",
+    "categoryId": "law_regs",
+    "question": "Comment le champ de vision du conducteur change-t-il avec l'augmentation de la vitesse ?",
+    "options": [
+      "Il s'élargit",
+      "Il reste identique",
+      "Il rétrécit (effet tunnel), réduisant la perception périphérique",
+      "Il devient plus net"
+    ],
+    "correctIndex": 2,
+    "explanation": "À haute vitesse, le cerveau se concentre loin devant. La vision périphérique diminue, ce qui rend plus difficile la détection des dangers sur les côtés."
+  },
+  {
+    "id": "signalisation_23",
+    "categoryId": "law_regs",
+    "question": "Quelle est la signification d'un panneau losange orange portant la mention 'GARDER LA DROITE' avec une flèche contournant un obstacle ?",
+    "options": [
+      "Vous devez tourner à droite à la prochaine rue",
+      "Vous devez contourner l'îlot ou l'obstacle par la droite",
+      "Stationnement à droite",
+      "Sortie à droite"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ce panneau indique la présence d'un obstacle physique (îlot, pilier) et oblige le conducteur à passer du côté droit pour l'éviter."
+  },
+  {
+    "id": "signalisation_24",
+    "categoryId": "law_regs",
+    "question": "Pour un camion porteur (sans remorque), quelle est la distance de freinage approximative à 100 km/h sur chaussée sèche (incluant temps de réaction) ?",
+    "options": [
+      "Environ 30 mètres",
+      "Environ 50 mètres",
+      "Plus de 100 mètres",
+      "Environ 10 mètres"
+    ],
+    "correctIndex": 2,
+    "explanation": "Pour un véhicule lourd, la distance d'arrêt totale à 100 km/h dépasse souvent la longueur d'un terrain de football (90-110m selon la charge et les freins)."
+  },
+  {
+    "id": "signalisation_25",
+    "categoryId": "law_regs",
+    "question": "Que devez-vous faire si vous transportez un chargement dont la hauteur dépasse 4,15 mètres ?",
+    "options": [
+      "Rien de spécial",
+      "Mettre un drapeau rouge",
+      "Obtenir un permis spécial de circulation (hors normes) et vérifier le parcours",
+      "Dégonfler les pneus"
+    ],
+    "correctIndex": 2,
+    "explanation": "La hauteur légale maximale sans permis est généralement de 4,15 m. Tout dépassement nécessite un permis spécial et une planification rigoureuse pour éviter les viaducs."
+  },
+  {
+    "id": "ronde_frein_01",
+    "categoryId": "safety_round",
+    "question": "Lors de la vérification d'étanchéité d'un système pneumatique sur un camion porteur (unité simple), vous mesurez une perte de pression de 30 kPa en une minute. Quelle est la conclusion ?",
+    "options": [
+      "Aucune défectuosité",
+      "Défectuosité mineure",
+      "Défectuosité majeure",
+      "À surveiller seulement"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pour un véhicule d'une seule unité, une perte de plus de 20 kPa (mais moins de 40 kPa) est une défectuosité mineure (Code 19.4)."
+  },
+  {
+    "id": "ronde_frein_02",
+    "categoryId": "safety_round",
+    "question": "Vous vérifiez le niveau du liquide de frein hydraulique et constatez qu'il est en dessous du niveau minimal, mais au-dessus du quart du niveau maximal. Quel est le constat ?",
+    "options": [
+      "Conforme",
+      "Défectuosité mineure",
+      "Défectuosité majeure",
+      "Interdiction de circuler"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un niveau inférieur au minimum requis est une défectuosité mineure (Code 18.1). Il devient majeur seulement s'il est inférieur au quart du niveau maximal (Code 18.A)."
+  },
+  {
+    "id": "ronde_frein_03",
+    "categoryId": "safety_round",
+    "question": "Lors de l'essai de l'installation de freinage hydraulique, la pédale de frein descend au plancher en 6 secondes. Quel est le type de défectuosité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune, si la pédale remonte",
+      "Mineure, si le freinage fonctionne encore"
+    ],
+    "correctIndex": 1,
+    "explanation": "Si la pédale descend au plancher en moins de 10 secondes, c'est une défectuosité majeure (Code 18.B)."
+  },
+  {
+    "id": "ronde_frein_04",
+    "categoryId": "safety_round",
+    "question": "Sur un système pneumatique, le compresseur ne parvient pas à maintenir une pression de 620 kPa (90 lb/po²) lorsque le moteur tourne au ralenti. De quel type de défectuosité s'agit-il ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Normale, le moteur doit tourner vite",
+      "Mineure, si la pression monte à haut régime"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'incapacité du compresseur à maintenir 620 kPa est une défectuosité majeure (Code 19.B)."
+  },
+  {
+    "id": "ronde_frein_05",
+    "categoryId": "safety_round",
+    "question": "Vous constatez que le frein de stationnement ne retient pas le véhicule lorsque vous tentez de le faire avancer délicatement en première vitesse. Quelle est la gravité ?",
+    "options": [
+      "Aucune, c'est un ajustement",
+      "Mineure",
+      "Majeure",
+      "Mineure, si le frein de service fonctionne"
+    ],
+    "correctIndex": 2,
+    "explanation": "Un frein de stationnement qui ne fonctionne pas correctement est une défectuosité majeure (Code 19.5 ou 18.5)."
+  },
+  {
+    "id": "ronde_attelage_01",
+    "categoryId": "safety_round",
+    "question": "Sur un élément d'ancrage de la sellette d'attelage, vous comptez 10 boulons au total, dont 3 sont cassés. Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Mineure, car il reste 7 boulons"
+    ],
+    "correctIndex": 2,
+    "explanation": "Plus de 20% des éléments de fixation endommagés sur un ancrage constitue une défectuosité majeure (3 sur 10 = 30%) (Code 1.C)."
+  },
+  {
+    "id": "ronde_attelage_02",
+    "categoryId": "safety_round",
+    "question": "Vous remarquez qu'une attache de sûreté (chaîne) est manquante sur votre remorque équipée d'un attelage à crochet. Quel est le constat ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune, si l'autre chaîne est là",
+      "Majeure, risque de séparation immédiat"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une attache de sûreté manquante, détériorée ou mal fixée est classée comme une défectuosité mineure (Code 1.2)."
+  },
+  {
+    "id": "ronde_attelage_03",
+    "categoryId": "safety_round",
+    "question": "Une fois le véhicule accouplé, vous constatez visuellement que les mâchoires de la sellette ne sont pas complètement fermées derrière le pivot d'attelage. Quelle est la défectuosité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "À ajuster prochainement",
+      "Aucune"
+    ],
+    "correctIndex": 1,
+    "explanation": "Des mâchoires mal fermées représentent un risque immédiat de séparation, c'est une défectuosité majeure (Code 1.E)."
+  },
+  {
+    "id": "ronde_attelage_04",
+    "categoryId": "safety_round",
+    "question": "Vous observez un mouvement (déplacement) entre la sellette d'attelage et le châssis du véhicule tracteur lors de la vérification. Quelle est la gravité ?",
+    "options": [
+      "Normale pour une sellette coulissante",
+      "Mineure",
+      "Majeure",
+      "Mineure, tant que c'est moins de 1 cm"
+    ],
+    "correctIndex": 2,
+    "explanation": "Tout déplacement entre un élément d'assemblage de la sellette et le châssis est une défectuosité majeure (Code 1.B)."
+  },
+  {
+    "id": "ronde_attelage_05",
+    "categoryId": "safety_round",
+    "question": "Sur une sellette coulissante munie de 4 goupilles de blocage, l'une d'elles est manquante. Quelle est la défectuosité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, car 75% sont présentes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Si 25% ou plus des goupilles sont manquantes ou inopérantes (1 sur 4 = 25%), c'est une défectuosité majeure (Code 1.D)."
+  },
+  {
+    "id": "ronde_suspension_01",
+    "categoryId": "safety_round",
+    "question": "Vous constatez qu'une lame de ressort (qui n'est pas la lame maîtresse) est cassée. Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Majeure, si elle est rouillée"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une lame de ressort cassée (autre que la maîtresse) est une défectuosité mineure (Code 14.1)."
+  },
+  {
+    "id": "ronde_suspension_02",
+    "categoryId": "safety_round",
+    "question": "La lame maîtresse de la suspension arrière est fissurée. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune, si elle tient encore",
+      "Mineure, tant qu'elle n'est pas cassée en deux"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une lame maîtresse fissurée, cassée ou manquante est toujours une défectuosité majeure (Code 14.A)."
+  },
+  {
+    "id": "ronde_suspension_03",
+    "categoryId": "safety_round",
+    "question": "Vous observez qu'un ballon de la suspension pneumatique est totalement dégonflé. Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Normale à l'arrêt",
+      "Mineure, si le compresseur fonctionne"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un ballon absent ou dégonflé est une défectuosité majeure (Code 14.B)."
+  },
+  {
+    "id": "ronde_suspension_04",
+    "categoryId": "safety_round",
+    "question": "L'âme du longeron présente une fissure, mais il n'y a aucun affaissement visible. Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Esthétique seulement"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un longeron fissuré (sans risque imminent de rupture ou affaissement) est une défectuosité mineure (Code 2.1)."
+  },
+  {
+    "id": "ronde_suspension_05",
+    "categoryId": "safety_round",
+    "question": "Une bride de fixation (U-bolt) de l'essieu est manquante. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune, s'il en reste une",
+      "Mineure, à remplacer sous 48h"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une bride de fixation (U-bolt) manquante, mal fixée ou cassée est une défectuosité majeure (Code 14.C)."
+  },
+  {
+    "id": "ronde_pneus_01",
+    "categoryId": "safety_round",
+    "question": "Sur un pneu arrière (non directeur), la bande de roulement est usée jusqu'à l'indicateur d'usure. Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "À changer au prochain entretien"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une profondeur de rainure égale ou inférieure à l'indicateur d'usure est une défectuosité mineure, sauf sur l'essieu directeur où c'est majeur (Code 9.1)."
+  },
+  {
+    "id": "ronde_pneus_02",
+    "categoryId": "safety_round",
+    "question": "Sur l'essieu directeur (avant), vous mesurez une profondeur de rainure inférieure à l'indicateur d'usure. Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si pas de crevaison"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sur l'essieu directeur d'un véhicule motorisé, une usure excessive (<= indicateur) est une défectuosité majeure (Code 9.A)."
+  },
+  {
+    "id": "ronde_pneus_03",
+    "categoryId": "safety_round",
+    "question": "Un pneu jumelé extérieur présente une coupure exposant la toile de renforcement. Le pneu intérieur est intact. Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Mineure, seulement si la pression est bonne"
+    ],
+    "correctIndex": 1,
+    "explanation": "Si un seul des pneus jumelés est endommagé au point de voir la toile, c'est une défectuosité mineure (Code 9.3). Si les deux l'étaient, ce serait majeur."
+  },
+  {
+    "id": "ronde_pneus_04",
+    "categoryId": "safety_round",
+    "question": "Vous constatez qu'un écrou de roue est manquant sur une des roues. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune, s'il en reste 9",
+      "Mineure, à remplacer rapidement"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une pièce de fixation de roue manquante, cassée ou mal fixée est toujours une défectuosité majeure (Code 12.B)."
+  },
+  {
+    "id": "ronde_pneus_05",
+    "categoryId": "safety_round",
+    "question": "Le niveau de lubrifiant du roulement de roue est visiblement sous le niveau minimal par la fenêtre d'inspection. Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Entretien normal"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un niveau de lubrifiant sous le niveau minimal est une défectuosité mineure (Code 12.1). Il devient majeur seulement si le lubrifiant est absent ou non visible."
+  },
+  {
+    "id": "ronde_frein_06",
+    "categoryId": "safety_round",
+    "question": "Lors du démarrage, la pression d'air monte de 350 à 600 kPa (50 à 90 lb/po²) en 4 minutes (moteur au régime maximal). Quel est le constat ?",
+    "options": [
+      "Conforme",
+      "Défectuosité mineure",
+      "Défectuosité majeure",
+      "Normal par temps froid"
+    ],
+    "correctIndex": 1,
+    "explanation": "Si la pression ne monte pas assez vite (plus de 3 minutes pour passer de 350 à 600 kPa), c'est une défectuosité mineure (Code 19.3)."
+  },
+  {
+    "id": "ronde_frein_07",
+    "categoryId": "safety_round",
+    "question": "L'avertisseur sonore de basse pression d'air (buzzer) ne se déclenche pas lorsque la pression descend sous 375 kPa (55 lb/po²). Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune, si le voyant lumineux fonctionne",
+      "Mineure, à réparer dans 48h"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'absence ou le non-fonctionnement de l'avertisseur de basse pression (sonore ou visuel) est une défectuosité majeure (Code 19.E)."
+  },
+  {
+    "id": "ronde_frein_08",
+    "categoryId": "safety_round",
+    "question": "Vous observez qu'une gaine de flexible de frein pneumatique est usée et laisse voir la toile de renforcement (armature), mais sans fuite d'air. Quel est le type de défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "À surveiller"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un flexible endommagé laissant voir l'armature (sans fuite active) est une défectuosité mineure (Code 19.2)."
+  },
+  {
+    "id": "ronde_frein_09",
+    "categoryId": "safety_round",
+    "question": "Lors de l'inspection sous le véhicule, vous remarquez de la graisse sur la garniture de frein (tambour) d'une roue arrière. Quelle est la défectuosité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune, un nettoyage suffit",
+      "Mineure, si le freinage reste efficace"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une garniture de frein contaminée par de l'huile ou de la graisse constitue une défectuosité majeure (Code 19.G)."
+  },
+  {
+    "id": "ronde_frein_10",
+    "categoryId": "safety_round",
+    "question": "Vous mesurez la course de la tige de poussée d'un récepteur de frein et elle dépasse la limite d'ajustement permise. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si l'autre roue est correcte"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un frein mal ajusté (course excessive) est une défectuosité majeure (Code 19.H)."
+  },
+  {
+    "id": "ronde_attelage_06",
+    "categoryId": "safety_round",
+    "question": "La plaque supérieure de la sellette d'attelage présente une fissure horizontale de 5 cm. Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si la fissure ne traverse pas"
+    ],
+    "correctIndex": 1,
+    "explanation": "Toute pièce d'attelage (comme la sellette) fissurée ou cassée est une défectuosité majeure (Code 1.A)."
+  },
+  {
+    "id": "ronde_attelage_07",
+    "categoryId": "safety_round",
+    "question": "Le mécanisme de verrouillage de la sellette coulissante (slider) est coincé et la poignée ne revient pas en position de blocage complet. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune, si les goupilles semblent sorties",
+      "Mineure, à graisser"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un mécanisme de verrouillage du chariot coulissant qui ne fonctionne pas est une défectuosité majeure (Code 1.F)."
+  },
+  {
+    "id": "ronde_attelage_08",
+    "categoryId": "safety_round",
+    "question": "Un câble de sécurité (attache de sûreté) est effiloché sur une remorque, mais n'est pas rompu. Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Majeure, risque de rupture"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une attache de sûreté (chaîne/câble) détériorée (effilochée) est une défectuosité mineure (Code 1.2)."
+  },
+  {
+    "id": "ronde_attelage_09",
+    "categoryId": "safety_round",
+    "question": "Sur un attelage à crochet (Pintle hook), le dispositif de retenue (la goupille ou le loquet de sécurité) est absent. Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si le crochet est lourd"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'absence ou le mauvais fonctionnement du dispositif de retenue (sécurité) est une défectuosité majeure (Code 1.G)."
+  },
+  {
+    "id": "ronde_attelage_10",
+    "categoryId": "safety_round",
+    "question": "Vous constatez une usure sur le pivot d'attelage (Kingpin), mais elle ne semble pas excéder les limites du fabricant. Quel est le constat ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "À remplacer immédiatement"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'usure d'une pièce du dispositif d'attelage (pivot, crochet) est une défectuosité mineure, tant qu'elle ne compromet pas la sécurité (Code 1.3)."
+  },
+  {
+    "id": "ronde_suspension_06",
+    "categoryId": "safety_round",
+    "question": "Un amortisseur hydraulique suinte légèrement l'huile. Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Normale"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une fuite d'huile sur un amortisseur est une défectuosité mineure (Code 14.2)."
+  },
+  {
+    "id": "ronde_suspension_07",
+    "categoryId": "safety_round",
+    "question": "Une barre de torsion (torque rod) est cassée en deux. Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune, s'il y en a une autre",
+      "Mineure, si l'essieu ne bouge pas"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une pièce de la suspension (comme un bras de réaction ou barre de torsion) fissurée ou cassée est une défectuosité majeure (Code 14.C)."
+  },
+  {
+    "id": "ronde_suspension_08",
+    "categoryId": "safety_round",
+    "question": "Le coussinet de caoutchouc (bushing) d'une barre de suspension est usé, créant un léger jeu. Quel est le constat ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Majeure, risque de vibration"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'usure d'une pièce de suspension ou un jeu mineur est une défectuosité mineure (Code 14.1)."
+  },
+  {
+    "id": "ronde_suspension_09",
+    "categoryId": "safety_round",
+    "question": "Vous découvrez un trou dans le plancher de la cabine qui pourrait laisser entrer des gaz d'échappement. Quelle est la défectuosité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Confort seulement"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une ouverture dans le plancher susceptible de laisser pénétrer des gaz d'échappement dans l'habitacle est une défectuosité majeure (Code 2.3)."
+  },
+  {
+    "id": "ronde_suspension_10",
+    "categoryId": "safety_round",
+    "question": "Une lame de ressort s'est déplacée et vient frotter contre le flanc du pneu. Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si le pneu n'est pas percé"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une pièce de suspension déplacée qui entre en contact avec une partie mobile (pneu/roue) est une défectuosité majeure (Code 14.D)."
+  },
+  {
+    "id": "ronde_pneus_06",
+    "categoryId": "safety_round",
+    "question": "Un corps étranger (roche) est coincé entre les roues jumelées, mais n'a pas endommagé les pneus. Quel est le constat ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "À retirer sans noter"
+    ],
+    "correctIndex": 1,
+    "explanation": "La présence d'un corps étranger entre les roues jumelées est une défectuosité mineure (Code 12.1)."
+  },
+  {
+    "id": "ronde_pneus_07",
+    "categoryId": "safety_round",
+    "question": "Vous remarquez qu'un pneu rechapé a été installé sur l'essieu directeur d'un camion lourd. Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Mineure, si la bande tient bien"
+    ],
+    "correctIndex": 2,
+    "explanation": "Il est interdit d'avoir un pneu rechapé sur l'essieu directeur d'un véhicule de plus de 4500 kg ; c'est une défectuosité majeure (Code 9.E)."
+  },
+  {
+    "id": "ronde_pneus_08",
+    "categoryId": "safety_round",
+    "question": "Vous entendez une fuite d'air continue provenant de la valve d'un pneu. Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, suffit de changer l'obus"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une fuite d'air dans un pneu (perceptible auditivement ou visuellement) est une défectuosité majeure (Code 9.B)."
+  },
+  {
+    "id": "ronde_pneus_09",
+    "categoryId": "safety_round",
+    "question": "Une jante de roue en aluminium présente une fissure de 3 cm près d'un trou de fixation. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si l'écrou tient"
+    ],
+    "correctIndex": 1,
+    "explanation": "Toute fissure sur une roue, une jante ou un anneau de retenue est une défectuosité majeure (Code 12.A)."
+  },
+  {
+    "id": "ronde_pneus_10",
+    "categoryId": "safety_round",
+    "question": "Le bouchon de valve est manquant sur un pneu. Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Informationnelle"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'absence d'un bouchon de valve n'est pas une défectuosité réglementée au sens du guide (Code 9), bien que ce soit une mauvaise pratique. (Cependant, une valve endommagée serait mineure)."
+  },
+  {
+    "id": "ronde_frein_11",
+    "categoryId": "safety_round",
+    "question": "Lors de l'inspection des réservoirs d'air, vous constatez qu'un réservoir est mal fixé et bouge légèrement lorsque vous le touchez. Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "À resserrer lors du prochain entretien"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un réservoir d'air comprimé ou de vide qui est mal fixé constitue une défectuosité mineure (Code 19.1)."
+  },
+  {
+    "id": "ronde_frein_12",
+    "categoryId": "safety_round",
+    "question": "Sur un système de freinage hydraulique, le voyant (témoin) d'anomalie du système de freinage s'allume au tableau de bord. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune, si le freinage fonctionne",
+      "Mineure, seulement si le niveau est bas"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'allumage du témoin d'anomalie du système de freinage de service hydraulique est une défectuosité mineure (Code 18.2). Note: Si c'est le niveau qui est bas sous le quart, c'est majeur."
+  },
+  {
+    "id": "ronde_frein_13",
+    "categoryId": "safety_round",
+    "question": "Vous observez qu'un câble de frein de stationnement (mécanique) est grippé et ne fonctionne pas librement. Quelle est la gravité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Normale en hiver"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un câble de commande du frein de stationnement grippé, coincé ou usé est une défectuosité mineure (Code 18.5 ou 19.5), à moins que le frein ne remplisse pas sa fonction (qui serait alors majeur)."
+  },
+  {
+    "id": "ronde_frein_14",
+    "categoryId": "safety_round",
+    "question": "Un flexible de frein pneumatique frotte contre le châssis, mais seule la couche extérieure de caoutchouc est éraflée (l'armature n'est pas visible). Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Mineure, à protéger"
+    ],
+    "correctIndex": 2,
+    "explanation": "Le simple frottement sans usure atteignant les toiles (armature) n'est généralement pas considéré comme une défectuosité au sens strict du guide, bien qu'il faille le corriger préventivement. Si l'usure atteignait la toile, ce serait mineur (19.2)."
+  },
+  {
+    "id": "ronde_frein_15",
+    "categoryId": "safety_round",
+    "question": "Le levier d'ajustement (slack adjuster) d'un frein pneumatique est fissuré. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si la course est bonne"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tout élément de la timonerie de frein (levier, came, tige) fissuré, cassé ou mal fixé est une défectuosité majeure (Code 19.A)."
+  },
+  {
+    "id": "ronde_attelage_11",
+    "categoryId": "safety_round",
+    "question": "La poignée de déverrouillage de la sellette d'attelage est tordue, mais elle permet tout de même de barrer et débarrer le mécanisme. Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Esthétique"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une commande de déverrouillage du mécanisme d'attelage qui est déformée mais fonctionnelle est une défectuosité mineure (Code 1.1). Si elle ne fonctionnait pas, ce serait majeur."
+  },
+  {
+    "id": "ronde_attelage_12",
+    "categoryId": "safety_round",
+    "question": "Sur un attelage à boule, vous constatez que la boule est fissurée. Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si la remorque est légère"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une pièce d'attelage (comme la boule) fissurée ou cassée est une défectuosité majeure (Code 1.A)."
+  },
+  {
+    "id": "ronde_attelage_13",
+    "categoryId": "safety_round",
+    "question": "Les boulons fixant le pivot d'attelage (Kingpin) à la remorque sont desserrés. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, à resserrer"
+    ],
+    "correctIndex": 1,
+    "explanation": "Si le pivot d'attelage est mal fixé (boulons desserrés), c'est une défectuosité majeure (Code 1.A ou 1.H selon l'interprétation de la pièce, mais généralement majeur car risque de séparation)."
+  },
+  {
+    "id": "ronde_attelage_14",
+    "categoryId": "safety_round",
+    "question": "Un crochet de sécurité sur l'extrémité d'une chaîne (attache de sûreté) est manquant. Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Majeure, la chaîne est inutile"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un accessoire de fixation (comme un crochet de chaîne) manquant ou inopérant sur l'attache de sûreté est une défectuosité mineure (Code 1.2). Note: Si l'attache elle-même est manquante, c'est aussi mineur au code 1.2, mais attention aux implications de sécurité."
+  },
+  {
+    "id": "ronde_attelage_15",
+    "categoryId": "safety_round",
+    "question": "Il y a un jeu excessif de plus de 5 mm dans le mécanisme de verrouillage de la sellette (entre la mâchoire et le pivot) une fois verrouillé. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Normal pour une vieille sellette"
+    ],
+    "correctIndex": 0,
+    "explanation": "Un jeu excessif dans le mécanisme de verrouillage est une défectuosité mineure (Code 1.3), tant que le verrouillage est effectif."
+  },
+  {
+    "id": "ronde_suspension_11",
+    "categoryId": "safety_round",
+    "question": "Une barre stabilisatrice est manquante sur l'essieu arrière. Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Optionnel"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une barre stabilisatrice ou de torsion manquante, cassée ou mal fixée est souvent classée mineure (Code 14.1) si ce n'est pas une pièce de guidage de l'essieu (comme un bras de réaction). *Correction*: Le guide précise que si la pièce maîtresse ou le guidage est affecté, c'est majeur. Une simple barre stabilisatrice (anti-sway) manquante/cassée est Mineure (14.1)."
+  },
+  {
+    "id": "ronde_suspension_12",
+    "categoryId": "safety_round",
+    "question": "Le pare-chocs arrière du véhicule est endommagé et présente une partie saillante tranchante. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Majeure seulement si manque complet"
+    ],
+    "correctIndex": 0,
+    "explanation": "Un pare-chocs endommagé, mal fixé ou présentant une arête vive est une défectuosité mineure (Code 2.2)."
+  },
+  {
+    "id": "ronde_suspension_13",
+    "categoryId": "safety_round",
+    "question": "La carrosserie du véhicule touche une pièce mobile (pneu) lorsque le véhicule est chargé. Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si le pneu résiste"
+    ],
+    "correctIndex": 1,
+    "explanation": "Si la carrosserie ou une partie du châssis touche une pièce mobile, c'est une défectuosité majeure (Code 2.B ou 14.D)."
+  },
+  {
+    "id": "ronde_suspension_14",
+    "categoryId": "safety_round",
+    "question": "Un support de roue de secours est fissuré mais retient encore la roue solidement. Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "À surveiller"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un support de roue de secours fissuré, mal fixé ou endommagé est une défectuosité mineure (Code 2.1)."
+  },
+  {
+    "id": "ronde_suspension_15",
+    "categoryId": "safety_round",
+    "question": "Une porte de la cabine ne ferme pas correctement et risque de s'ouvrir en roulant. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si on la barre"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une porte qui ne ferme pas ou ne se verrouille pas de façon sécuritaire est une défectuosité majeure (Code 2.A)."
+  },
+  {
+    "id": "ronde_pneus_11",
+    "categoryId": "safety_round",
+    "question": "La pression d'un pneu mesurée est de 50% de la pression maximale indiquée sur son flanc. Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Critique"
+    ],
+    "correctIndex": 2,
+    "explanation": "Un pneu dont la pression est égale ou inférieure à 50% de la pression maximale est considéré comme un pneu à plat, donc une défectuosité majeure (Code 9.B)."
+  },
+  {
+    "id": "ronde_pneus_12",
+    "categoryId": "safety_round",
+    "question": "Un pneu présente une usure en facettes (cupping) importante, mais la profondeur des rainures est supérieure à l'indicateur d'usure et aucune toile n'est visible. Quel est le constat ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Mineure, cause de vibration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Une usure irrégulière (facettes) n'est pas une défectuosité au sens du guide tant que la profondeur minimale est respectée et que la toile n'est pas exposée ou la carcasse endommagée."
+  },
+  {
+    "id": "ronde_pneus_13",
+    "categoryId": "safety_round",
+    "question": "Vous observez des stries de rouille (rust streaks) autour de tous les écrous d'une roue. Quelle est la défectuosité potentielle à signaler ?",
+    "options": [
+      "Mineure (écrous desserrés)",
+      "Majeure (risque de perte de roue)",
+      "Aucune, c'est juste sale",
+      "Majeure, seulement si un écrou manque"
+    ],
+    "correctIndex": 1,
+    "explanation": "Les signes de mouvement d'une roue (stries de rouille) indiquent une fixation inefficace. Une roue mal fixée (pièces de fixation mal fixées) est une défectuosité majeure (Code 12.B)."
+  },
+  {
+    "id": "ronde_pneus_14",
+    "categoryId": "safety_round",
+    "question": "Une valve de pneu est coincée à l'intérieur de la jante et il est impossible de vérifier la pression ou de gonfler le pneu. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Majeure, car pneu invérifiable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Une valve endommagée, usée ou inaccessible est généralement considérée comme une défectuosité mineure (Code 9.2 ou par extension de l'entretien), tant qu'il n'y a pas de fuite active majeure."
+  },
+  {
+    "id": "ronde_pneus_15",
+    "categoryId": "safety_round",
+    "question": "Sur un essieu arrière à roues jumelées, le pneu intérieur est d'une taille (diamètre) nettement différente du pneu extérieur. Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Mineure, usure prématurée seulement"
+    ],
+    "correctIndex": 1,
+    "explanation": "La présence de pneus de dimensions différentes ou de types de construction différents sur un même essieu (sauf exception temporaire) est une défectuosité mineure (Code 9.4)."
+  },
+  {
+    "id": "ronde_frein_16",
+    "categoryId": "safety_round",
+    "question": "Le témoin ABS (système antiblocage) de la remorque reste allumé en permanence sur le tableau de bord du camion (pour un véhicule fabriqué après 2001). Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Informative seulement"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le mauvais fonctionnement du système antiblocage (ABS), indiqué par le témoin, est une défectuosité mineure (Code 19.6)."
+  },
+  {
+    "id": "ronde_frein_17",
+    "categoryId": "safety_round",
+    "question": "Sur un essieu directeur, vous remarquez que le récepteur de frein (chambre à air) gauche est de type 30 et le droit de type 24. Quelle est la défectuosité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si la course est ajustée"
+    ],
+    "correctIndex": 1,
+    "explanation": "La présence de récepteurs de frein de tailles différentes sur un même essieu directeur est une défectuosité majeure (Code 19.D)."
+  },
+  {
+    "id": "ronde_frein_18",
+    "categoryId": "safety_round",
+    "question": "La valve de protection du tracteur ne se ferme pas automatiquement lorsque la pression d'air descend sous le seuil critique (entre 135 et 310 kPa). Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si le frein de stationnement fonctionne"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le mauvais fonctionnement de la valve de protection du tracteur est une défectuosité majeure (Code 19.C)."
+  },
+  {
+    "id": "ronde_frein_19",
+    "categoryId": "safety_round",
+    "question": "Un tambour de frein présente des fissures externes visibles. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, sauf si morceaux manquants"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un tambour ou un disque fissuré (externe) ou cassé est une défectuosité majeure (Code 19.G)."
+  },
+  {
+    "id": "ronde_frein_20",
+    "categoryId": "safety_round",
+    "question": "Lors du freinage, le véhicule tire fortement vers la gauche. Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Majeure, risque de perte de contrôle"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'absence d'action de freinage sur une roue ou un déséquilibre important est une défectuosité mineure au sens de la ronde (Code 18.3 ou 19.8), sauf si le véhicule devient incontrôlable (rarement vérifiable à l'arrêt)."
+  },
+  {
+    "id": "ronde_attelage_16",
+    "categoryId": "safety_round",
+    "question": "La flèche d'attelage (drawbar) d'une remorque est tordue de façon visible. Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si pas fissurée"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un élément du dispositif d'attelage (comme la flèche) tordu, fissuré ou cassé est une défectuosité majeure (Code 1.A)."
+  },
+  {
+    "id": "ronde_attelage_17",
+    "categoryId": "safety_round",
+    "question": "Les butées (stops) soudées aux extrémités du rail de la sellette coulissante sont manquantes. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si on ne coulisse pas"
+    ],
+    "correctIndex": 1,
+    "explanation": "Des butées de rail manquantes ou inefficaces sur une sellette coulissante constituent une défectuosité majeure (Code 1.F)."
+  },
+  {
+    "id": "ronde_attelage_18",
+    "categoryId": "safety_round",
+    "question": "La chaîne de sécurité est attachée au châssis avec un boulon ordinaire (grade 2) au lieu d'un boulon grade 8 requis. Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Difficile à voir"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une attache de sûreté mal fixée (ou avec une fixation inadéquate visible) est une défectuosité mineure (Code 1.2)."
+  },
+  {
+    "id": "ronde_attelage_19",
+    "categoryId": "safety_round",
+    "question": "Sur un attelage 'Pintle Hook', le jeu horizontal entre le crochet et l'anneau est important mais le métal n'est pas usé de plus de 5 mm. Quel est le constat ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "À graisser"
+    ],
+    "correctIndex": 0,
+    "explanation": "Un certain jeu est normal. Tant que l'usure ne dépasse pas les limites du fabricant (ou n'est pas excessive), ce n'est pas une défectuosité majeure. Une usure mineure serait codée en 1.3 (Mineure)."
+  },
+  {
+    "id": "ronde_attelage_20",
+    "categoryId": "safety_round",
+    "question": "Le support de la sellette d'attelage (le socle) présente une soudure fissurée. Quelle est la gravité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si moins de 5 cm"
+    ],
+    "correctIndex": 1,
+    "explanation": "Toute fissure sur un élément de structure ou de fixation de l'attelage est une défectuosité majeure (Code 1.A)."
+  },
+  {
+    "id": "ronde_suspension_16",
+    "categoryId": "safety_round",
+    "question": "Une fuite d'air est audible au niveau d'un ballon de suspension pneumatique. Quelle est la défectuosité ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si le compresseur compense"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une fuite d'air dans le système de suspension (ballon percé) est une défectuosité majeure (Code 14.B), car elle affecte la stabilité."
+  },
+  {
+    "id": "ronde_suspension_17",
+    "categoryId": "safety_round",
+    "question": "Le support de l'essieu (hanger) est fissuré. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si le boulon tient"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un support de suspension (main de ressort/hanger) fissuré ou cassé est une défectuosité majeure (Code 14.C)."
+  },
+  {
+    "id": "ronde_suspension_18",
+    "categoryId": "safety_round",
+    "question": "Un amortisseur est manquant sur l'essieu avant. Quelle est la gravité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Majeure, car essieu directeur"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un amortisseur manquant, mal fixé ou qui fuit est une défectuosité mineure (Code 14.2), même à l'avant."
+  },
+  {
+    "id": "ronde_suspension_19",
+    "categoryId": "safety_round",
+    "question": "Le bouchon du réservoir de carburant est manquant. Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Environnementale"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un bouchon de réservoir de carburant manquant ou mal fermé est une défectuosité mineure (Code 15.1)."
+  },
+  {
+    "id": "ronde_suspension_20",
+    "categoryId": "safety_round",
+    "question": "Une traverse du châssis (cross-member) est tordue mais pas cassée, et ne touche aucune pièce mobile. Quel est le constat ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Esthétique"
+    ],
+    "correctIndex": 1,
+    "explanation": "Un élément du châssis tordu, fissuré ou corrodé (sans risque de rupture imminent) est une défectuosité mineure (Code 2.1)."
+  },
+  {
+    "id": "ronde_pneus_16",
+    "categoryId": "safety_round",
+    "question": "Vous observez qu'un clou est planté dans la bande de roulement d'un pneu, sans perte de pression audible. Quelle est la défectuosité ?",
+    "options": [
+      "Aucune",
+      "Mineure",
+      "Majeure",
+      "Majeure, risque d'éclatement"
+    ],
+    "correctIndex": 1,
+    "explanation": "La présence d'un corps étranger dans la bande de roulement est une défectuosité mineure (Code 9.2)."
+  },
+  {
+    "id": "ronde_pneus_17",
+    "categoryId": "safety_round",
+    "question": "L'entretoise (spacer) entre les roues jumelées est usée et permet un mouvement. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si les écrous sont serrés"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une entretoise de roue fendue, cassée ou déformée (ou usée excessivement) est une défectuosité majeure (Code 12.A)."
+  },
+  {
+    "id": "ronde_pneus_18",
+    "categoryId": "safety_round",
+    "question": "Les deux pneus jumelés se touchent (contact flanc contre flanc) sans être dégonflés. Quelle est la gravité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "Normale avec la charge"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le contact entre les pneus d'un ensemble jumelé est une défectuosité mineure (Code 9.4)."
+  },
+  {
+    "id": "ronde_pneus_19",
+    "categoryId": "safety_round",
+    "question": "Une valve de gonflage est positionnée de telle sorte qu'elle frotte contre le tambour de frein. Quelle est la défectuosité ?",
+    "options": [
+      "Majeure",
+      "Mineure",
+      "Aucune",
+      "À ajuster"
+    ],
+    "correctIndex": 1,
+    "explanation": "Une valve endommagée ou mal positionnée (frottement) est une défectuosité mineure (Code 9.2)."
+  },
+  {
+    "id": "ronde_pneus_20",
+    "categoryId": "safety_round",
+    "question": "Sur une roue à rayons (Dayton), une cale de retenue (cleat) est fissurée. Quel est le constat ?",
+    "options": [
+      "Mineure",
+      "Majeure",
+      "Aucune",
+      "Mineure, si l'écrou est bon"
+    ],
+    "correctIndex": 1,
+    "explanation": "Toute pièce de fixation (cale, anneau, écrou) cassée, fissurée ou manquante est une défectuosité majeure (Code 12.B)."
+  },{
+    "id": "arrimage_01",
+    "categoryId": "general",
+    "question": "Selon les critères de performance du Règlement sur les normes d'arrimage, quelle force le système d'arrimage doit-il être capable de contrer vers l'AVANT (freinage) ?",
+    "options": [
+      "50% de la masse de la cargaison",
+      "80% de la masse de la cargaison",
+      "100% de la masse de la cargaison",
+      "20% de la masse de la cargaison"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le système d'arrimage doit empêcher la cargaison de se déplacer lorsqu'elle est soumise à une force équivalant à 80% de sa masse vers l'avant (0,8 g)."
+  },
+  {
+    "id": "arrimage_02",
+    "categoryId": "general",
+    "question": "Quelle est la limite de charge nominale (LCN) totale minimale requise pour tous les appareils d'arrimage utilisés pour retenir une cargaison ?",
+    "options": [
+      "Au moins 25% de la masse du chargement",
+      "Au moins 50% de la masse du chargement",
+      "Au moins 80% de la masse du chargement",
+      "Au moins 100% de la masse du chargement"
+    ],
+    "correctIndex": 1,
+    "explanation": "La somme des limites de charge nominale (LCN/WLL) de tous les appareils d'arrimage doit être d'au moins 50% de la masse totale de la cargaison."
+  },
+  {
+    "id": "arrimage_03",
+    "categoryId": "law_regs",
+    "question": "Quand le conducteur doit-il vérifier l'arrimage de sa cargaison après le départ (première vérification) ?",
+    "options": [
+      "Après 3 heures de route",
+      "À 80 km ou moins du lieu de chargement",
+      "À 240 km du lieu de chargement",
+      "Seulement si la cargaison bouge"
+    ],
+    "correctIndex": 1,
+    "explanation": "Le conducteur doit vérifier la cargaison et le système d'arrimage à 80 km ou moins du lieu de chargement."
+  },
+  {
+    "id": "arrimage_04",
+    "categoryId": "law_regs",
+    "question": "En cours de route, à quelle fréquence périodique l'inspection de l'arrimage doit-elle être effectuée (la première des éventualités) ?",
+    "options": [
+      "Toutes les 4 heures ou 300 km",
+      "Après 3 heures de conduite ou 240 km parcourus",
+      "Après 5 heures de conduite ou 500 km parcourus",
+      "Une fois par jour seulement"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'inspection doit être faite lors d'un changement de situation de travail, ou lorsque le véhicule a circulé pendant 3 heures, ou après avoir parcouru 240 km."
+  },
+  {
+    "id": "arrimage_05",
+    "categoryId": "general",
+    "question": "Quel est le nombre minimal d'appareils d'arrimage requis pour un article non bloqué de 400 kg et de 1,2 mètre de longueur ?",
+    "options": [
+      "1 appareil",
+      "2 appareils",
+      "3 appareils",
+      "4 appareils"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pour un article de 500 kg ou moins et de 1,52 m ou moins de longueur, un seul appareil d'arrimage est requis."
+  },
+  {
+    "id": "arrimage_06",
+    "categoryId": "general",
+    "question": "Quel est le nombre minimal d'appareils d'arrimage pour un article non bloqué pesant plus de 500 kg, peu importe sa longueur (jusqu'à 1,52 m) ?",
+    "options": [
+      "1 appareil",
+      "2 appareils",
+      "3 appareils",
+      "Aucun"
+    ],
+    "correctIndex": 1,
+    "explanation": "Si la masse excède 500 kg, il faut au minimum 2 appareils d'arrimage, même si l'article est court (1,52 m ou moins)."
+  },
+  {
+    "id": "arrimage_07",
+    "categoryId": "general",
+    "question": "Pour une cargaison d'une longueur supérieure à 3,04 m, quelle est la règle pour déterminer le nombre d'appareils d'arrimage ?",
+    "options": [
+      "1 appareil par mètre",
+      "2 appareils pour les premiers 3,04 m, plus 1 pour chaque tranche (ou fraction) de 3,04 m supplémentaire",
+      "3 appareils fixes peu importe la longueur",
+      "1 appareil aux deux extrémités seulement"
+    ],
+    "correctIndex": 1,
+    "explanation": "La règle exige 2 appareils pour les premiers 3,04 m, et un appareil additionnel pour chaque multiple ou fraction de 3,04 m excédentaire."
+  },
+  {
+    "id": "arrimage_08",
+    "categoryId": "general",
+    "question": "Quelle doit être la résistance minimale d'une structure d'extrémité avant (panneau frontal) en contact avec la cargaison ?",
+    "options": [
+      "20% de la masse de la cargaison",
+      "40% de la masse de la cargaison (si hauteur < 1,83m) ou 50% si plus haut",
+      "80% de la masse de la cargaison",
+      "100% de la masse de la cargaison"
+    ],
+    "correctIndex": 1,
+    "explanation": "La structure doit résister à 40% de la masse si elle mesure moins de 1,83 m de haut, sinon la norme de base de retenue avant s'applique."
+  },
+  {
+    "id": "arrimage_09",
+    "categoryId": "general",
+    "question": "Quelle est la définition de la Limite de Charge Nominale (LCN ou WLL) ?",
+    "options": [
+      "La charge de rupture de la chaîne",
+      "La masse totale du véhicule",
+      "La charge maximale attribuée par le fabricant pouvant être appliquée à un appareil d'arrimage en utilisation normale",
+      "Le poids de la chaîne elle-même"
+    ],
+    "correctIndex": 2,
+    "explanation": "La LCN (Working Load Limit) est la charge maximale sécuritaire d'utilisation certifiée par le fabricant."
+  },
+  {
+    "id": "arrimage_10",
+    "categoryId": "general",
+    "question": "Comment doit-on disposer les grumes supérieures (le sommet du chargement) sur un véhicule ?",
+    "options": [
+      "En pyramide pointue",
+      "En arceau (demi-cercle)",
+      "À plat",
+      "En désordre"
+    ],
+    "correctIndex": 1,
+    "explanation": "Les grumes formant le sommet du chargement doivent être disposées en arceau (forme arrondie) pour assurer la stabilité et le contact avec les sangles."
+  },
+  {
+    "id": "arrimage_11",
+    "categoryId": "general",
+    "question": "Pour le transport de bobines de métal dont l'œil est vertical, quelle est l'exigence minimale d'arrimage ?",
+    "options": [
+      "1 seule chaîne par-dessus",
+      "3 appareils d'arrimage : 2 en diagonale (en X) par-dessus l'œil et 1 transversal",
+      "2 chaînes latérales",
+      "Aucun arrimage si bloqué"
+    ],
+    "correctIndex": 1,
+    "explanation": "Les bobines à œil vertical requièrent au moins 3 appareils : deux formant un X à travers l'œil et un passant transversalement par-dessus."
+  },
+  {
+    "id": "arrimage_12",
+    "categoryId": "general",
+    "question": "Lors du transport de véhicules lourds ou d'équipement sur chenilles (plus de 4500 kg), combien d'appareils d'arrimage sont requis au minimum ?",
+    "options": [
+      "2 appareils",
+      "3 appareils",
+      "4 appareils d'arrimage ayant chacun une LCN d'au moins 2268 kg",
+      "Autant que de roues"
+    ],
+    "correctIndex": 2,
+    "explanation": "Un véhicule lourd doit être retenu par au moins 4 appareils d'arrimage indépendants (un à chaque coin), chacun ayant une LCN minimale de 2268 kg (5000 lb)."
+  },
+  {
+    "id": "arrimage_13",
+    "categoryId": "general",
+    "question": "Qu'est-ce qu'un 'coin de protection' et quand doit-il être utilisé ?",
+    "options": [
+      "Pour protéger les pneus",
+      "Pour empêcher le conducteur de se blesser",
+      "Pour protéger la sangle ou la chaîne contre l'abrasion ou la coupure sur les arêtes vives de la cargaison",
+      "Pour décorer le chargement"
+    ],
+    "correctIndex": 2,
+    "explanation": "Un coin de protection est requis partout où un appareil d'arrimage touche une arête vive pour éviter qu'il ne soit coupé ou endommagé."
+  },
+  {
+    "id": "arrimage_14",
+    "categoryId": "general",
+    "question": "Quelle est l'exigence pour les grumes extérieures de la rangée inférieure ?",
+    "options": [
+      "Elles peuvent flotter librement",
+      "Elles doivent être en contact avec une traverse-berceau ou un poteau",
+      "Elles doivent être clouées",
+      "Elles doivent dépasser de 2 mètres"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pour assurer la stabilité, les grumes extérieures du bas doivent appuyer fermement contre les poteaux ou les traverses-berceaux du véhicule."
+  },
+  {
+    "id": "arrimage_15",
+    "categoryId": "general",
+    "question": "Si vous transportez des tuyaux de béton de petit diamètre, comment devez-vous arrimer les tuyaux avant de l'étage supérieur ?",
+    "options": [
+      "Ils n'ont pas besoin d'être arrimés",
+      "Avec un filet seulement",
+      "Par au moins un appareil d'arrimage disposé vers l'arrière, si possible à 45 degrés, passant à travers le tuyau",
+      "Avec de la colle"
+    ],
+    "correctIndex": 2,
+    "explanation": "Les tuyaux d'extrémité doivent être retenus individuellement par une chaîne ou sangle passant au travers et tirant vers l'intérieur du chargement."
+  },
+  {
+    "id": "arrimage_16",
+    "categoryId": "law_regs",
+    "question": "Que doit-on faire avec l'articulation d'un véhicule lourd (ex: chargeuse) lors de son transport ?",
+    "options": [
+      "La laisser libre pour absorber les chocs",
+      "La bloquer ou la verrouiller pour empêcher tout mouvement (mise en portefeuille)",
+      "La démonter",
+      "La graisser"
+    ],
+    "correctIndex": 1,
+    "explanation": "Les véhicules articulés doivent être verrouillés au niveau de l'articulation pour éviter qu'ils ne se plient ou bougent sur la remorque."
+  },
+  {
+    "id": "arrimage_17",
+    "categoryId": "general",
+    "question": "Pour une cargaison de vrac (sable, gravier) dans une benne ouverte, quelle est l'exigence de recouvrement ?",
+    "options": [
+      "Aucune si on roule lentement",
+      "Une bâche recouvrant le chargement s'il dépasse 15 cm sous le sommet de la paroi, ou si risque de chute",
+      "Toujours une bâche étanche à l'eau",
+      "Un filet à larges mailles seulement"
+    ],
+    "correctIndex": 1,
+    "explanation": "La cargaison doit être recouverte si elle risque de s'envoler ou si elle dépasse un point de référence situé à 15 cm sous le bord supérieur de la benne."
+  },
+  {
+    "id": "arrimage_18",
+    "categoryId": "general",
+    "question": "Comment calculer la LCN effective d'une chaîne qui va d'un point d'ancrage du véhicule, passe sur la cargaison et revient s'attacher au véhicule ?",
+    "options": [
+      "50% de sa LCN",
+      "100% de sa LCN",
+      "Elle ne compte pas",
+      "200% de sa LCN"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lorsque l'appareil est attaché au véhicule aux deux bouts, on additionne 50% pour chaque segment attaché, donc 100% de la LCN de l'appareil au total."
+  },
+  {
+    "id": "arrimage_19",
+    "categoryId": "general",
+    "question": "Quelle est l'exigence pour l'utilisation de tapis à friction (tapis antidérapants) sous une cargaison ?",
+    "options": [
+      "Ils remplacent toutes les chaînes",
+      "Ils réduisent la force de friction requise",
+      "Ils ne servent à rien",
+      "Ils sont considérés comme un moyen complémentaire et permettent parfois de réduire le nombre de dispositifs requis pour le mouvement avant"
+    ],
+    "correctIndex": 3,
+    "explanation": "Les tapis à coefficient élevé de friction augmentent la résistance au glissement, ce qui est un facteur clé dans le calcul de l'arrimage nécessaire."
+  },
+  {
+    "id": "arrimage_20",
+    "categoryId": "general",
+    "question": "Si un article de cargaison risque de rouler (ex: tuyau, bobine), quelle mesure additionnelle est obligatoire ?",
+    "options": [
+      "Rouler doucement",
+      "Utiliser des cales, coins, berceaux ou dispositifs de blocage pour l'immobiliser",
+      "Le dégonfler",
+      "Le mettre debout"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tout objet susceptible de rouler doit être physiquement bloqué par des cales (chocks) ou des berceaux, en plus d'être arrimé."
+  }
+]
 }

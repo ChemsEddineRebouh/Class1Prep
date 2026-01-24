@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     width: '100%',
     paddingVertical: 5
   },
-  placeholder: {
+  placeholder: {  
     width: 320,
     height: 50,
     backgroundColor: '#E2E8F0',
